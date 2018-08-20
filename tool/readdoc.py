@@ -36,6 +36,7 @@ class main:
 	def getinfo95(self):	#取数据字典表
 		srow=""
 		row=[]
+		f=open("../doc/field.txt","w")
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
 			for cell in r.cells:
@@ -48,6 +49,7 @@ class main:
 					srow=srow+t+"|"
 				if len(row)==6:
 					print(srow)
+					f.write(srow.encode("gbk")+"\n")
 					srow=""
 					row=[]
 	def printtable(self,tno):	#输出表格

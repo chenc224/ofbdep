@@ -9,4 +9,5 @@ Open-ended fund business data exchange protocol
 
 ## 目录结构说明
 * data	数据目录。根据原始资料整理的文本格式数据，相关代码都基于这些基础数据
-* doc	文档目录。一些全局性的文档放在这里
+* doc	文档目录。包括文档、中间数据、说明等。
+* tool	工具目录。一些辅助性工具，比如从原始文档中获取数据的脚本
