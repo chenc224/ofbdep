@@ -7,6 +7,8 @@ Open-ended fund business data exchange protocol
 
 这里把它整理成txt的格式，方便大家在自己的代码中使用这个协议
 
+代码在debian jessie环境下测试通过。
+
 ## 目录结构说明
 * data	数据目录。根据原始资料整理的文本格式数据，相关代码都基于这些基础数据
 * doc	文档目录。包括文档、中间数据、说明等。
