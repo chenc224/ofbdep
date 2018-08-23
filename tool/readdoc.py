@@ -40,16 +40,35 @@ class main:
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
 			for cell in r.cells:
-				t=cell.text.replace("\n",",")
-				if len(row)==2 and t not in ["A","C","N",u"类型"]:
-					print(u"格式错误:"+srow+t)
+				t=cell.text.replace("\n",",").encode("gbk")
+				if len(row)==1 and row[0]==t:	#读入的word文档格式错乱，有时候会多一列，只能用这样的笨办法跳过
+					continue
+				if len(row)==2 and t not in ["A","C","N","类型"]:
+					print("格式错误:"+srow+t)
 					sys.exit(1)
-				if len(row)!=1 or row[0]!=t:
+				if len(row)==3:
+					num=filter(str.isdigit,t)
+					row.append(num)
+					srow=srow+num+"|"
+					if row[2]=="N":
+						ext=["零","一","二","三","四","五","六","七","八","九"]
+						for i in range(1,len(ext)):
+							if t.find(ext[i])>0:
+								row.append("%d" %(i))
+								srow=srow+"%d" %(i)+"|"
+								print("%s %d" %(t,i))
+						if len(row)==4:
+							row.append("0")
+							srow=srow+"0|"
+					else:
+						row.append("")
+						srow=srow+"|"
+				else:
 					row.append(t)
 					srow=srow+t+"|"
-				if len(row)==6:
+				if len(row)==7:
 					print(srow)
-					f.write(srow.encode("gbk")+"\n")
+					f.write(srow+"\n")
 					srow=""
 					row=[]
 	def printtable(self,tno):	#输出表格
