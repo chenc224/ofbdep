@@ -1,0 +1,7 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+33|AnnContent|C|4000|公告内容||Y|
+57|AnnouncementNo|C|13|公告文件号|基金管理公司编码：(NNN) +YYYYMMDD+序号(NN)|Y|
+74|AnnouncementDate|A|8|公告日期|格式为：YYYYMMDD|Y|
+75|AnnouncementType|A|1|公告类别 |0-常规，1-异常|Y|
+81|LengthOfAnnouncement|N|10|公告内容长度||Y|
+131|AnnouncementTitle|C|100|公告标题||Y|

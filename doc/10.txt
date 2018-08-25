@@ -1,0 +1,59 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+9|TotalSubsAmnt|N|16（两位小数）|申购总金额||Y|
+11|TotalSubsCharge|N|16（两位小数）|申购手续费总金额||Y|
+12|TotalSubsVol|N|16（两位小数）|申购总份数||Y|
+67|FundCode|C|6|基金代码||Y|
+109|TotalRedemptionAmount|N|16（两位小数）|基金赎回总金额||Y|
+111|TotalFeeOfRedemption|N|16（两位小数）|赎回手续费总金额||Y|
+118|TotalRedemptionVol|N|16（两位小数）|赎回总份数||Y|
+121|DistributorCode|C|9|销售人代码||Y|
+15|AmntReinbursed|N|16（两位小数）|退回金额||N|
+18|TotalVolOfDistributorInTA|N|16（两位小数）|代销机构在注册登记机构处的单只基金总份数（含冻结）||N|
+41|VolOfDividendforReinvestment|N|16（两位小数）|红利转投资部分总份数||N|
+43|DividendAmount|N|16（两位小数）|红利现金部分总金额||N|
+44|TotalDividendAmount|N|16（两位小数）|分红总金额||N|
+56|TotalFeeForDividend|N|10（两位小数）|分红手续费||N|
+77|BackAmountByInvalid|N|16（两位小数）|因为无效而划回投资人的资金||N|
+95|OtherFee2|N|16（两位小数）|其他费用2||N|
+96|OtherFee3|N|16（两位小数）|其他费用3||N|
+116|TotalReinvestmentDividend|N|16（两位小数）|红利转投资部分总金额||N|
+117|BackAmountByExcess|N|16（两位小数）|因为剩余而划回投资人的资金||N|
+139|Tax|N|16（两位小数）|税金||N|
+144|AggregationDate|A|8|汇总日期|格式为：YYYYMMDD|N|
+148|TrailCommission|N|16（两位小数）|尾随佣金||N|
+172|TotalFrontendFee|N|16（两位小数）|交易前端收费总额||N|
+173|TotalBackendLoad|N|16（两位小数）|交易后端收费总额||N|
+217|SalerNetReceivableAmount|N|16（两位小数）|销售人净收结算金额||N|
+218|SalerNetPayableAmount|N|16（两位小数）|销售人净付结算金额||N|
+219|SalerTotalFee|N|16（两位小数）|销售人收取费用总额||N|
+220|SalerBuyFee|N|16（两位小数）|销售人收取申购费用||N|
+221|SalerBidFee|N|16（两位小数）|销售人收取赎回费用||N|
+222|FundTotalFee|N|16（两位小数）|赎回费用总额（扣除保留在基金资产部分）||N|
+223|RaiseTotalAmount|N|16（两位小数）|认购资金总额||N|
+224|AccumulativeTotalRaiseAmount|N|16（两位小数）|累计认购资金总额||N|
+225|RaiseInterest|N|16（两位小数）|认购期间利息||N|
+226|SalerRaiseFee|N|16（两位小数）|销售人认购费||N|
+227|ConversionInAmount|N|16（两位小数）|转入款||N|
+228|ConvertingToAmount|N|16（两位小数）|转出款||N|
+229|SalerExchangeFee|N|16（两位小数）|销售人转换费||N|
+230|BidTax|N|16（两位小数）|申购印花税||N|
+231|RedemptionTax|N|16（两位小数）|赎回印花税||N|
+232|IndividualCapitalGainTax|N|16（两位小数）|分红个人利得所得税||N|
+233|InstituteCapitalGainTax|N|16（两位小数）|分红机构利得所得税||N|
+234|IndividualIncomeTax|N|16（两位小数）|分红个人增值所得税||N|
+235|InstituteIncomeTax|N|16（两位小数）|分红机构增值所得税||N|
+236|SalerReinvestmentFee|N|16（两位小数）|销售人再投资费||N|
+237|SubFeeRetTA|N|16（两位小数）|申购归注册登记人所得费用|包括注册登记人的费用|N|
+238|RedemFeeRetTA|N|16（两位小数）|赎回归注册登记人所得费用|包括注册登记人的费用|N|
+239|TotalTransInAmount|N|16（两位小数）|基金转换入总金额|　|N|
+240|TotalFeeOfTransInAmount|N|16（两位小数）|基金转换入手续费总金额|　|N|
+241|TotalTransInVol|N|16（两位小数）|基金转换入总份数|　|N|
+242|TotalTransOutAmount|N|16（两位小数）|基金转换出总金额|　|N|
+243|TotalFeeOfTransOutAmount|N|16（两位小数）|基金转换出手续费总金额|　|N|
+244|TotalTransOutVol|N|16（两位小数）|基金转换出总份数|　|N|
+245|BidTrade|N|13|成功申购总户数|　|N|
+246|RedeemTrade|N|13|成功赎回总户数|　|N|
+247|FreezeTotal|N|16（两位小数）|冻结总份数|　|N|
+248|ManagerCode|A|3|管理人代码||N|
+249|NetBidTotalAmount|N|16（两位小数）|申购成功资金总额（不含费用，不含税）||N|
+250|NetRedeemTotalAmount|N|16（两位小数）|赎回成功资金总额（不含费用，不含税）||N|

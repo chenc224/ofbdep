@@ -1,0 +1,10 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+8|AppSheetSerialNo|A|24|申请单编号||Y|
+92|TransactionDate|A|8|交易发生日期||Y|
+32|TransactionCfmDate|A|8|交易确认日期||Y|
+137|TASerialNO|A|20|TA确认交易流水号||Y|
+119|ReturnCode|A|4|交易处理返回代码||Y|
+309|ErrorDetail|C|60|出错详细信息||N|
+635|ReservedField1|C|20|预留字段1||N|
+636|ReservedField2|C|20|预留字段2||N|
+637|ReservedField3|C|30|预留字段3||N|

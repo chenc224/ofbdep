@@ -1,0 +1,84 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+63|FundName|C|40|基金名称||Y|
+66|TotalFundVol|N|16（两位小数）|基金总份数||Y|
+67|FundCode|C|6|基金代码||Y|
+68|FundStatus|C|1|基金状态|0-可申购赎回，1-发行,4-停止申购赎回,5-停止申购，6-停止赎回,8-基金终止，9-基金封闭 |Y|
+86|NAV|N|7（四位小数）|基金单位净值||Y|
+149|UpdateDate|A|8|基金净值日期|格式为：YYYYMMDD,对ETF、QDII基金的申购或赎回净值，此字段的含义为该申购或赎回净值适用的交易申请的日期。|Y|
+555|NetValueType|C|1|净值类型|0-普通净值1-申购净值 2-赎回净值 ,对ETF、QDII基金可同时下发3条净值记录，通过此字段区分基金单位净值及基金净值日期的含义。|Y|
+273|AccumulativeNAV|N|7（四位小数）|累计基金单位净值||Y|
+180|ConvertStatus|C|1|基金转换状态|0-可转入，可转出,1-只可转入,2-只可转出,3-不可转换|Y|
+604|PeriodicStatus|C|1|定期定额状态|0-允许定期定额业务,1-仅允许定投业务,2-仅允许定赎业务,3-禁止定期定额业务|Y|
+605|TransferAgencyStatus|C|1|转托管状态|0-允许所有转托管,1-仅允许场外转托管,2-仅允许跨市场转托管,3-禁止所有转托管|Y|
+129|FundSize|N|16（两位小数）|基金规模|基金的金额规模|Y|
+37|CurrencyType|A|3|结算币种|具体编码依GB/T 12406-2008|Y|
+317|AnnouncFlag|C|1|公告标志|0-公告  1-不公告|Y|
+24|DefDividendMethod|A|1|默认分红方式||N|
+2|InstAppSubsAmnt|N|16（两位小数）|法人追加认购金额||N|
+3|InstAppSubsVol|N|16（两位小数）|法人追加认购份数||N|
+35|MinAmountByInst|N|16（两位小数）|法人首次认购最低金额||N|
+36|MinVolByInst|N|16（两位小数）|法人首次认购最低份数||N|
+38|CustodianCode|C|3|托管人代码||N|
+39|AmountOfPeriodicSubs|N|16（两位小数）|定时定额申购的金额||N|
+40|DateOfPeriodicSubs|A|8|定时定额申购日期|格式为：YYYYMMDD|N|
+70|MaxRedemptionVol|N|16（两位小数）|基金最高赎回份数||N|
+71|MinAccountBalance|N|16（两位小数）|基金最低持有份数||N|
+78|IPOStartDate|A|8|基金募集开始日期|格式为：YYYYMMDD|N|
+79|IPOEndDate|A|8|基金募集结束日期|格式为：YYYYMMDD|N|
+82|FundManagerCode|C|3|基金管理人||N|
+99|IndiAppSubsVol|N|16（两位小数）|个人追加认购份数||N|
+100|IndiAppSubsAmount|N|16（两位小数）|个人追加认购金额||N|
+104|MinSubsVolByIndi|N|16（两位小数）|个人首次认购最低份数||N|
+105|MinSubsAmountByIndi|N|16（两位小数）|个人首次认购最低金额||N|
+114|RegistrarCode|C|2|注册登记人代码||N|
+130|FundSponsor|A|3|基金发起人||N|
+133|TradingPrice|N|7（四位小数）|交易价格||N|
+151|FaceValue|N|7（四位小数）|基金面值||N|
+42|DividentDate|A|8|分红日/发放日||N|
+113|RegistrationDate|A|8|权益登记日期|格式为：YYYYMMDD|N|
+46|XRDate|A|8|除权日|表示最近一次除权日期|N|
+198|MaxSubsVolByIndi|N|16（两位小数）|个人最高认购份数||N|
+199|MaxSubsAmountByIndi|N|16（两位小数）|个人最高认购金额||N|
+200|MaxSubsVolByInst|N|16（两位小数）|法人最高认购份数||N|
+201|MaxSubsAmountByInst|N|16（两位小数）|法人最高认购金额||N|
+202|UnitSubsVolByIndi|N|16（两位小数）|个人认购份数单位|表示级差含义|N|
+203|UnitSubsAmountByIndi|N|16（两位小数）|个人认购金额单位|表示级差含义|N|
+204|UnitSubsVolByInst|N|16（两位小数）|法人认购份数单位|表示级差含义|N|
+205|UnitSubsAmountByInst|N|16（两位小数）|法人认购金额单位|表示级差含义|N|
+206|MinBidsAmountByIndi|N|16（两位小数）|个人首次申购最低金额||N|
+207|MinBidsAmountByInst|N|16（两位小数）|法人首次申购最低金额||N|
+208|MinAppBidsAmountByIndi|N|16（两位小数）|个人追加申购最低金额||N|
+209|MinAppBidsAmountByInst|N|16（两位小数）|法人追加申购最低金额||N|
+210|MinRedemptionVol|N|16（两位小数）|基金最少赎回份数||N|
+211|MinInterconvertVol|N|16（两位小数）|最低基金转换份数||N|
+212|IssueTypeByIndi|C|1|个人发行方式|1-比例发行,2-摇号,3-先来先买|N|
+213|IssueTypeByInst|C|1|机构发行方式|1-比例发行,2-摇号,3-先来先买|N|
+214|SubsType|C|1|认购方式|0-金额认购,1-份数认购|N|
+215|CollectFeeType|C|1|交易费收取方式|0-价内费,1-价外费|N|
+216|NextTradeDate|A|8|下一开放日||N|
+267|ValueLine|N|7（两位小数）|产品价值线数值||N|
+308|TotalDivident|N|8(五位小数)|累计单位分红||N|
+501|FundIncome|N|8(五位小数)|货币基金万份收益|货币基金必填|N|
+502|FundIncomeFlag|C|1|货币基金万份收益正负|0-正  1-负,货币基金必填|N|
+503|Yield|N|8(五位小数)|货币基金七日年化收益率|货币基金必填|N|
+504|YieldFlag|C|1|货币基金七日年化收益率正负|0-正  1-负,货币基金必填|N|
+505|GuaranteedNAV|N|7(四位小数)|保本净值|　|N|
+556|FundYearIncomeRate|N|8(五位小数)|货币基金年收益率|最近一年来的收益率|N|
+557|FundYearIncomeRateFlag|C|1|货币基金年收益率正负|　|N|
+609|IndiMaxPurchase|N|16(两位小数)|个人最大申购金额||N|
+610|InstMaxPurchase|N|16(两位小数)|法人最大申购金额||N|
+611|IndiDayMaxSumBuy|N|16(两位小数)|个人当日累计购买最大金额||N|
+612|InstDayMaxSumBuy|N|16(两位小数)|法人当日累计购买最大金额||N|
+613|IndiDayMaxSumRedeem|N|16(两位小数)|个人当日累计赎回最大份额||N|
+614|InstDayMaxSumRedeem|N|16(两位小数)|法人当日累计赎回最大份额||N|
+615|IndiMaxRedeem|N|16(两位小数)|个人最大赎回份额||N|
+616|InstMaxRedeem|N|16(两位小数)|法人最大赎回份额||N|
+535|FundDayIncomeFlag|C|1|基金当日总收益正负|　货币基金必填|N|
+536|FundDayIncome|N|16(两位小数)|基金当日总收益|　货币基金必填|N|
+304|AllowBreachRedempt|C|1|允许违约赎回标志|0-允许，1-不允许|N|
+310|FundType|C|2|基金类型||N|
+331|FundTypeName|C|30|基金类型名称||N|
+332|RegistrarName|C|40|注册登记人名称||N|
+333|FundManagerName|C|40|基金管理人名称||N|
+314|FundServerTel|C|30|基金公司客服电话||N|
+315|FundInternetAddress|C|40|基金公司网站网址||N|

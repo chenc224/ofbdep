@@ -1,0 +1,6 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+324|SeatCode|C|6|席位代码|场内席位必填|N|
+121|DistributorCode|C|9|销售人代码|场外销售人必填|N|
+326|DistributorName|C|80|销售人名称|席位或销售人的名称|Y|
+318|TransferPermitFlag|C|1|跨市场转入允许标志|0-允许，1-不允许|Y|
+47|DownLoaddate|A|8|交易数据下传日期|格式为：YYYYMMDD,指发送日期|Y|

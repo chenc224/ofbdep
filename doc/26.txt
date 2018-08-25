@@ -1,0 +1,22 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+13|AvailableVol|N|16（两位小数）|持有人可用基金份数||Y|
+18|TotalVolOfDistributorInTA|N|16（两位小数）|基金总份数（含冻结）||Y|
+32|TransactionCfmDate|A|8|交易确认日期|格式为：YYYYMMDD|Y|
+67|FundCode|C|6|基金代码||Y|
+120|TransactionAccountID|A|17|投资人基金交易账号|投资人在销售机构内开设的用于交易的账号|Y|
+121|DistributorCode|C|9|销售人代码||Y|
+136|TAAccountID|C|12|投资人基金账号||Y|
+59|TotalFrozenVol|N|16（两位小数）|基金冻结总份数|仅包括账户类和交易类冻结业务及派生继续冻结的份额|N|
+87|BranchCode|C|9|网点号码||Y|
+137|TASerialNO|A|20|TA确认交易流水号||N|
+173|TotalBackendLoad|N|16（两位小数）|交易后端收费总额||N|
+260|ShareClass|A|1|收费方式|0-前收费，1-后收费|Y|
+264|DetailFlag|A|1|明细标志|0-非明细，1-明细,非明细指针对基金账户的对账，明细指针对基金账户具体过户日或TA确认流水号的对账|Y|
+268|AccountStatus|A|1|账户状态|0-正常，1-冻结，2-挂失|N|
+274|ShareRegisterDate|A|8|份额注册日期|明细标志为1时必填|N|
+507|UndistributeMonetaryIncome|N|16(两位小数)|货币基金未付收益金额|对货币基金，明细标志为0时必填|N|
+510|UndistributeMonetaryIncomeFlag|C|1|货币基金未付收益金额正负|0-正  1-负,对货币基金，明细标志为0时必填|N|
+508|GuaranteedAmount|N|16(两位小数)|剩余保本金额||N|
+527|SourceType|C|1|份额原始来源|0-认购1-申购 2-定期定额申购3-分红,明细标志为1时必填|N|
+24|DefDividendMethod|A|1|默认分红方式|0-红利转投，1-现金分红|N|
+618|AllowRedemptDate|A|8|可赎回日期|最近的可提交赎回申请的日期。如遇特殊情况无法准确填写时，填‘00010101’。|Y|

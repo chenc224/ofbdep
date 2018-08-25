@@ -1,0 +1,11 @@
+ID|字段名|类型|长度|描述|备注|是否,必需|
+42|DividentDate|A|8|分红日/发放日||Y|
+44|TotalDividendAmount|N|16（两位小数）|基金红利总额||Y|
+50|TotalDividendIndeed|N|16（两位小数）|基金实发红利总金额||Y|
+56|TotalFeeForDividend|N|10（两位小数）|分红费用合计||Y|
+67|FundCode|C|6|基金代码||Y|
+116|TotalReinvestmentDividend|N|16（两位小数）|红利自动再投资总金额||Y|
+121|DistributorCode|C|9|销售人代码||Y|
+125|DocumentSendDate|A|8|文件发送日期|格式为：YYYYMMDD|Y|
+139|Tax|N|16（两位小数）|税金||Y|
+272|TotalVolumeofReinvestmentDividend|N|16（两位小数）|红利再投资份额总额||Y|
