@@ -25,17 +25,27 @@ class main:
 		print("表格总数:%d" %(len(self.f.tables)))
 		for i in range(len(self.f.tables)):
 			self.t=self.f.tables[i]
-			if self.arg=="" or self.arg=="%d" %(i):
+			if self.arg in ["","all"] or self.arg=="%d" %(i):
 				self.printtable(i)
 			if hasattr(main,"getinfo%d" %(i)):
 				if self.arg=="%d" %(i) or self.arg=="all":
 					print("::::::run getinfo%d" %(i))
-					if self.arg!="":
-						self.printtable(i)
 					getattr(main,"getinfo%d" %(i))(self)
 	def getfield(self,filename):	#取各文件的字段表
 		srow=""
 		f=open("../doc/%s" %(filename),"w")
+		for j in range(len(self.t.rows)):
+			r=self.t.rows[j]
+			for cell in r.cells:
+				t=cell.text.replace("\n",",").encode("gbk")
+				srow=srow+t+"|"
+			print(srow)
+			f.write(srow+"\n")
+			srow=""
+		f.close()
+	def getinfo4(self):	#基金业务类型 即各业务申请及确认代码表
+		srow=""
+		f=open("../doc/servicetype.txt","w")
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
 			for cell in r.cells:
