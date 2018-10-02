@@ -1,0 +1,194 @@
+%-*- coding: UTF-8 -*-
+\documentclass[UTF8,fleqn,hyperref]{ctexrep}
+%\documentclass{article}
+%\usepackage[UTF8,fleqn,hyperref]{ctex}
+\usepackage[text={160mm,230mm},centering]{geometry}
+\setcounter{tocdepth}{1}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{supertabular}
+\pagestyle{fancy}
+\title{开放式基金业务数据交换协议}
+%\author{陈川\\chenc224@163.com}
+\date{\today}
+\bibliographystyle{plain}
+\usepackage{lettrine}
+\hypersetup{hidelinks}
+\setlength{\headheight}{27pt}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{1}
+
+\chapter{前言}
+本标准基于《开放式基金业务数据交换协议》（JR/T0017-2012）制定。 
+
+本标准的附录A、附录B为规范性附录。
+
+\chapter{开放式基金业务数据交换协议}
+\section{范围}
+
+本标准规定了场外开放式基金、证券公司大集合产品（文中简称“基金”）相关业务中机构之间进行数据交换时所采用的数据格式、数据定义和数据内容，证券期货经营机构管理的其它资管产品、私募基金相关业务可参照本标准进行数据交换。资管产品在沪深证券交易所场内数据交换参照交易所相关规定。
+
+\section{规范性引用文件}
+下列文件中的条款通过本标准的引用而成为本标准的条款。凡是注日期的引用文件，其随后所有的修改单（不包括勘误的内容）或修改版均不适用于本标准，然而，鼓励根据本标准达成协议的各方研究是否可使用这些文件的最新版本。凡是不注日期的引用文件，其最新版本适用于本标准。
+
+GB 2312-1980 信息交换用汉字编码字符集 基本集
+
+GB 18030-2005 信息技术 信息交换用汉字编码字符集 基本集的扩充
+
+GB/T 1988-1998 信息技术 信息交换用七位编码字符集
+
+GB/T 12406-2008 表示货币和资金的代码
+
+GB/T 2260-2007中华人民共和国行政区划代码
+
+GB/T 2659-2000 世界各国和地区名称代码
+
+ISO 3166 国家和地区代码表
+
+\section{术语和定义}
+下列术语和定义适用于本文件。
+\subsection{基金业务当事人  fund business party}
+与基金业务处理的相关的所有机构与个人。
+
+\subsubsection{基金发起人  fund founder-member}
+以基金的成立为目的，并按照规定的设立条件和程序设立基金的机构。
+\subsubsection{基金管理人  fund manager}
+依法从事投资基金管理的基金管理公司。
+\subsubsection{基金托管人  fund custodian}
+依法保管基金资产、监督管理人投资活动的机构。
+\subsubsection{注册（过户）登记人  transfer agent}
+负责基金投资人账户保管、交易记录保存、代理分红、投资人账户报告、登记基金份数等服务的机构，简称TA。
+\subsubsection{基金持有人  fund holder}
+持有证券投资基金份数的投资人。
+\subsubsection{基金销售人  fund saler}
+销售基金的法人或自然人。
+
+\subsection{业务种类  business type}
+基金业务处理中的所涉及到的业务类型。
+
+\subsubsection{基金账户  transfer agent account}
+注册登记人为基金投资人设立的基金账户，用于记录和保存持有人的基金单位份数。
+\subsubsection{开户  open an account}
+基金投资人申请设立注册登记基金账户的业务。
+\subsubsection{认购  subsribe}
+投资人在基金募集期间申请购买该基金的行为。
+\subsubsection{申购  buy}
+投资人申请购买已经成立的基金的行为。基金管理人接到投资人的购买申请时，应按当日公布的基金份数净资产加减必要费用予以成交，基金托管人按规定与基金管理人办理交割与清算手续，注册登记人增加投资人账户的基金数量和基金的资产。
+\subsubsection{赎回  redeem}
+基金持有人申请基金管理人买回该投资人已购其管理的基金的行为。接到基金持有人赎回请求时，基金管理人应按当日公布的基金份数净资产加减必要费用予以成交，基金托管人按规定与基金管理人办理交割与清算手续，在规定期限内向基金持有人支付赎回资金，注册登记人减少基金持有人账户基金份数和基金的资产。
+\subsubsection{巨额赎回  vastly redeem}
+在基金的单个开放日，基金净赎回申请超过该基金总份数的一定比例时，就是巨额赎回。
+\subsubsection{预约赎回  preengage redeem}
+基金持有人为给基金管理人一定的时间办理赎回业务而提前发出的在未来某日赎回的申请。
+\subsubsection{分红  dividend}
+按基金契约的规定，基金管理人在每个会计年度将基金运作所得收益按一定的比例分配给基金持有人的行为。
+\subsubsection{登记日  register date}
+登记基金持有人按其所持基金享受基金分红权利的时点。
+\subsubsection{红利发放日  dividend date}
+向基金持有人拨付红利款项的日期。
+\subsubsection{红利再投资  dividend reinvestment}
+基金持有人将所持基金分得的现金红利自动申请转为持有该基金单位的投资活动。
+\subsubsection{非交易过户  transfer}
+基金赠与、继承、协助执行司法判决等有双方参与且涉及基金单位数量变化的过户业务。
+\subsubsection{基金转换   fund conversion}
+基金管理人向基金持有人提供的一种服务，即将基金持有人的某只基金转换为另一只基金的服务。
+
+\subsection{基金信息  fund information}
+有关基金本身的特征信息。
+\subsubsection{基金单位资产净值 net asset value}
+基金开放日闭市后基金资产净值除以当日基金单位的余额数量。
+\subsubsection{申购费  buy charge}
+投资人申购基金单位所需支付的费用。
+\subsubsection{赎回费  redemption charge}
+投资人赎回基金单位时所支付的费用。
+\subsubsection{账户管理费  account management charge}
+基金管理人向投资人收取的用于管理维护投资人基金账户的费用。
+\subsubsection{注册登记费  transfer agent charge}
+注册登记代理人根据“注册登记代理协议”向基金管理人收取的费用。
+\subsubsection{尾随佣金  rake-off}
+基金管理人给与基金代理销售人的销售业绩报酬。
+
+\section{要求}
+\subsection{数据类型定义}
+\begin{table}[!ht]\centering
+\caption{本标准中使用的数据类型定义}
+\begin{tabular}{|c|c|}\hline
+标识符 & 数据类型 \\ \hline
+C & 字符型 \\ \hline
+A & 数字字符型，限于0—9  \\ \hline
+N & 数值型，其长度不包含小数点，可参与数值计算 \\ \hline
+TEXT & 不定长文本 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{数据处理}
+本标准包括监管部门相关业务规则所要求的数据。数据处理规则为：
+\begin{enumerate}
+\item 数字左补零右对齐，字符右补空格左对齐；
+\item 字符不区分大小写；
+\item 对于数据交换文件：
+\begin{enumerate}
+\item 采用文本文件定长记录方式；
+\item 每行一条完整记录；
+\item 换行须用换行（OAH）、回车（ODH）字符；
+\item 带有小数点的数值型数据，传输时不传小数点。
+\end{enumerate}
+\item 汉字信息交换按国家标准GB 2312-1980和GB 18030-2005执行，西文信息交换按国家标准GB/T 1988-1998执行。
+\end{enumerate}
+
+\subsection{加密}
+对通过公网进行传输的敏感数据进行加密是非常必要的，本标准建议对这些数据进行加密处理。
+
+\section{信息交换格式}
+每次交换的信息包括三个部分：信息头，信息体和信息尾。
+
+文件交换方式的详细约定见附录中的格式。
+
+\begin{enumerate}
+\item 信息头：表示一次数据交换的开始，它给出本次数据交换的信息提要。
+\begin{table}[!ht]\centering
+\caption{信息头格式}
+\begin{tabular}{|c|c|}\hline
+名称 & 说明\\ \hline
+信息头标识 & 用以标明该信息头的格式类型\\ \hline
+协议版本号 & \\ \hline
+信息创建人 & 销售人/注册登记人/基金管理人/托管人的代码\\ \hline
+信息接收人 & 销售人/注册登记人/基金管理人/托管人的代码\\ \hline
+传送发生日期 & 传送发生日期\\ \hline
+\end{tabular}
+\end{table}
+
+\item 信息体：包括数据交换的内容
+%\begin{longtable}{ll}
+%\begin{table}[!ht]\centering
+\begin{longtable}{|c|c|}
+\caption{信息体格式} \\ \hline
+名称 & 说明 \\ \hline
+汇总表号 & 文件传输次序标志\\ \hline
+文件类型代码  & \\ \hline
+发送人	 & \\ \hline
+接收人	 & \\ \hline
+字段数 & 表示该数据文件的构成字段数\\ \hline
+字段名1	 & \\ \hline
+…	 & \\ \hline
+字段名N	 & \\ \hline
+记录数 & 该数据文件包含的数据记录数\\ \hline
+记录1	 & \\ \hline
+记录2	 & \\ \hline
+记录3	 & \\ \hline
+…	 & \\ \hline
+记录M	 &\\ \hline
+信息体结束标识 & 用以标明信息体的结束\\ \hline
+\end{longtable}
+%\end{table}
+%\end{longtable} supertabular
+
+\item 信息尾：表示一次数据交换的结束。
+
+\end{enumerate}
+
+\end{document}
