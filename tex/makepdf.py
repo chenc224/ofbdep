@@ -21,7 +21,9 @@ class main:
 		tex.write(tmpl.render(rd).encode("utf8"))
 		tex.close()
 		os.system("pdflatex ofbdep.tex")
-	def rd1(self):
-		print("ok")		
+	def rd1(self):	#处理基金业务类型表
+		rd["servicetype"]=[]
+		for l in file("../data/servicetype.txt","r").readlines():
+			rd["servicetype"].append(l.decode("gbk").split("|"))
 rd={}
 main()

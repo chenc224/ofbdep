@@ -6,7 +6,9 @@
 \setcounter{tocdepth}{1}
 \usepackage{fancyhdr}
 \usepackage{longtable}
-\usepackage{supertabular}
+\usepackage{ltxtable}
+\usepackage{tabularx}
+\usepackage{tabu}
 \pagestyle{fancy}
 \title{开放式基金业务数据交换协议}
 %\author{陈川\\chenc224@163.com}
@@ -163,8 +165,6 @@ TEXT & 不定长文本 \\ \hline
 \end{table}
 
 \item 信息体：包括数据交换的内容
-%\begin{longtable}{ll}
-%\begin{table}[!ht]\centering
 \begin{longtable}{|c|c|}
 \caption{信息体格式} \\ \hline
 名称 & 说明 \\ \hline
@@ -184,10 +184,19 @@ TEXT & 不定长文本 \\ \hline
 记录M	 &\\ \hline
 信息体结束标识 & 用以标明信息体的结束\\ \hline
 \end{longtable}
-%\end{table}
-%\end{longtable} supertabular
 
 \item 信息尾：表示一次数据交换的结束。
+
+\section{业务类型编码}
+基金业务所涉及的业务类型见表4。业务代码在数据交换文件中使用，为三位编码。其中第一位表示业务发起的方向（0表示申请，1表示确认，有的业务为单向发起），第二、三位表示业务类别。
+
+\begin{longtabu}{|l|l|l|X|}
+\caption{基金业务类型} \\ \hline
+{% for s in servicetype %}	{# 业务类型表 #}
+{{ s[0] }} & {{ s[1] }} & {{ s[2] }} & {{ s[3] }} \\ \hline
+{% endfor %}
+\end{longtabu}
+
 
 \end{enumerate}
 
