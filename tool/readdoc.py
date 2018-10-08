@@ -55,6 +55,8 @@ class main:
 			f.write(srow+"\n")
 			srow=""
 		f.close()
+	def getinfo5(self):	#开户申请001及帐户信息修改申请003的数据项
+		self.gettableinfo("st101.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
@@ -145,6 +147,16 @@ class main:
 					f.write(srow+"\n")
 					srow=""
 					row=[]
+	def gettableinfo(self,filename):	#取表数据，用于获取交易对应的字段表
+		srow=""
+		f=open("../doc/%s" %(filename),"w")
+		for j in range(len(self.t.rows)):
+			r=self.t.rows[j]
+			srow=r.cells[0].text.replace("\n",",").encode("gbk")+"|"+r.cells[6].text.replace("\n",",").encode("gbk")
+			print(srow)
+			f.write(srow+"\n")
+			srow=""
+		f.close()
 	def printtable(self,tno):	#输出表格
 		print("================第%d张表" %(tno))
 		for j in range(len(self.t.rows)):
