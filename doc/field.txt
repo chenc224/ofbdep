@@ -42,10 +42,10 @@ ID|字段名|类型|||描述|备注|
 42|DividentDate|A|8||分红日/发放日||
 43|DividendAmount|N|16|0|基金账户红利资金||
 44|TotalDividendAmount|N|16|0|基金红利总额||
-45|DividendOrShare|A|1||红利/红利再投资标志, |0-红利再投资，1-红利|
+45|DividendOrShare|A|1||红利/红利再投资标志,|0-红利再投资，1-红利|
 46|XRDate|A|8||除权日||
 47|DownLoaddate|A|8||交易数据下传日期|指发送日期|
-48|EducationLevel|C|3||投资人学历|01-研究生02-大学本科03- 大学专科04-中专或技校05-技工学校06-高中07-初中08-小学09-文盲或半文盲  |
+48|EducationLevel|C|3||投资人学历|01-研究生02-大学本科03- 大学专科04-中专或技校05-技工学校06-高中07-初中08-小学09-文盲或半文盲|
 49|EmailAddress|C|40||投资人E-MAIL地址||
 50|TotalDividendIndeed|N|16|0|基金实发红利总金额||
 51|FaxNo|C|24||投资人传真号码||
@@ -72,7 +72,7 @@ ID|字段名|类型|||描述|备注|
 72|CertificateNo|C|30||投资人证件号码||
 73|AnnualIncome|N|8|0|投资人年收入||
 74|AnnouncementDate|A|8||公告日期|格式为：YYYYMMDD|
-75|AnnouncementType|A|1||公告类别 |0-常规，1-异常|
+75|AnnouncementType|A|1||公告类别|0-常规，1-异常|
 76|Interest|N|10|0|基金账户利息金额||
 77|BackAmountByInvalid|N|16|0|因为无效而划回投资人的资金||
 78|IPOStartDate|A|8||基金募集开始日期|格式为：YYYYMMDD|
@@ -121,7 +121,7 @@ ID|字段名|类型|||描述|备注|
 121|DistributorCode|C|9||销售人代码||
 122|AccountAbbr|C|12||投资人户名简称||
 123|DividendRatio|N|16|0|红利比例|(金额/分红总额)|
-	124|ConfidentialDocumentCode|C|8||密函编号||
+124|ConfidentialDocumentCode|C|8||密函编号||
 125|DocumentSendDate|A|8||文件发送日期|格式为：YYYYMMDD|
 126|Sex|A|1||投资人性别|1-男，2-女|
 127|SHSecuritiesAccountID|C|10||上交所证券账号||
@@ -174,7 +174,7 @@ ID|字段名|类型|||描述|备注|
 175|TotalSuccessfulAmount|N|16|0|成功金额汇总||
 176|TransferDirection|A|1||转入/转出标识|0-转出，1-转入|
 177|BusinessFinishFlag|C|1||业务过程完全结束标识|0-中间过程,1-业务过程结束|
-178 |TotalFailingDealingNum|N|6|0|失败交易笔数||
+178|TotalFailingDealingNum|N|6|0|失败交易笔数||
 179|TotalSuccessfulDealingNum|N|6|0|成功交易笔数||
 180|ConvertStatus|C|1||基金转换状态|0-可转入，可转出,1-只可转入,2-只可转出,3-不可转换|
 181|AcctNameOfInvestorInClearingAgency|C|60||投资人收款银行账户户名||
@@ -284,7 +284,7 @@ ID|字段名|类型|||描述|备注|
 287|InstTranCertValidDate|A|8||机构经办人身份证件有效日期||
 288|InstReprCertValidDate|A|8||机构法人身份证件有效日期||
 289|ClientRiskRate|C|1||客户风险等级|1-低风险承受能力,2-较低风险承受能力,3-中等风险承受能力,4-较高风险承受能力,5-高风险承受能力|
-290|InstReprManageRange|C|2||机构法人经营范围|01-农、林、牧、渔业 02-采矿业03-制造业 04-电力、燃气及水的生产和供应业 05-建筑业 06-交通运输、仓储和邮政业  07-信息传输、计算机服务和软件业 08-批发和零售业 09-住宿和餐饮业 10-金融业 11-房地产业 12-租赁和商务服务业 13-科学研究、技术服务和地质勘查业 14-水利、环境和公共设施管理业 15-居民服务和其他服务业 16-教育 17-卫生、社会保障和社会福利业 18-文化、体育和娱乐业 19-公共管理与社会组织 20-国际组织 |
+290|InstReprManageRange|C|2||机构法人经营范围|01-农、林、牧、渔业 02-采矿业03-制造业 04-电力、燃气及水的生产和供应业 05-建筑业 06-交通运输、仓储和邮政业  07-信息传输、计算机服务和软件业 08-批发和零售业 09-住宿和餐饮业 10-金融业 11-房地产业 12-租赁和商务服务业 13-科学研究、技术服务和地质勘查业 14-水利、环境和公共设施管理业 15-居民服务和其他服务业 16-教育 17-卫生、社会保障和社会福利业 18-文化、体育和娱乐业 19-公共管理与社会组织 20-国际组织|
 291|ControlHolder|C|80||控股股东||
 292|ActualController|C|80||实际控制人||
 293|MarriageStatus|C|1||婚姻状况|0-未婚  1-已婚|
@@ -296,7 +296,7 @@ ID|字段名|类型|||描述|备注|
 299|RationType|C|1||定期定额种类||
 300|BreachFee|N|16|0|违约金||
 301|SalesPromotion|C|3||促销活动代码||
-302|AcceptMethod|C|1||受理方式|0-柜台1-电话2-网上3-自助 4-传真 5-其他 |
+302|AcceptMethod|C|1||受理方式|0-柜台1-电话2-网上3-自助 4-传真 5-其他|
 303|ForceRedemptionType|C|1||强制赎回类型|0-强制赎回，1-违约赎回，2-到期|
 304|AllowBreachRedempt|C|1||允许违约赎回标志|0-允许，1-不允许|
 305|PunishFee|N|16|0|惩罚性费用||
@@ -330,7 +330,7 @@ ID|字段名|类型|||描述|备注|
 333|FundManagerName|C|40||基金管理人名称||
 334|EnglishFirstName|C|20||投资人英文名||
 335|EnglishFamliyName|C|20||投资人英文姓||
-336|Vocation|C|4||行业|采用国标GB/T4754-2011 |
+336|Vocation|C|4||行业|采用国标GB/T4754-2011|
 337|CorpoProperty|C|2||企业性质|0-国企 1-民营 2-合资,3-其它|
 338|StaffNum|N|16|0|员工人数||
 339|Hobbytype|C|2||兴趣爱好类型||
@@ -359,7 +359,7 @@ ID|字段名|类型|||描述|备注|
 362|DaysUpperLimit|N|5|0|天数上限||
 363|MaxFee|N|16|0|最高费用||
 365|GetFeeRateMethod|C|1||取费率方式|0-固定收费 1-按金额 2-按天数 3-按份额|
-366|FeeRateFlag |C|1||费率标志|0-绝对费率 1-相对费率|
+366|FeeRateFlag|C|1||费率标志|0-绝对费率 1-相对费率|
 367|FundNameAbbr|C|20||基金简称||
 368|IsGuaranteedFund|C|1||是否保本基金|0-非  1-是|
 369|IsLOFFund|C|1||是否LOF基金|0-非  1-是|
@@ -426,7 +426,7 @@ ID|字段名|类型|||描述|备注|
 552|CashDividendFee|N|16|0|现金分红手续费|　|
 553|ConfirmPayDate|C|8||确认支付日期|　|
 554|NetValueDate|C|8||净值日期|　|
-555|NetValueType|C|1||净值类型|0-普通净值1-申购净值 2-赎回净值 |
+555|NetValueType|C|1||净值类型|0-普通净值1-申购净值 2-赎回净值|
 556|FundYearIncomeRate|N|8|5|货币基金年收益率|最近一年来的收益率|
 557|FundYearIncomeRateFlag|C|1||货币基金年收益率正负|　|
 558|BeginInterestDate|C|8||起息日期|转发LOF认购明细中起息日期|
