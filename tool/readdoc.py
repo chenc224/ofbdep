@@ -56,7 +56,7 @@ class main:
 			srow=""
 		f.close()
 	def getinfo5(self):	#开户申请001及帐户信息修改申请003的数据项
-		self.gettableinfo("st101.txt")
+		self.gettableinfo("st001.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
@@ -116,7 +116,7 @@ class main:
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
 			for cell in r.cells:
-				t=cell.text.replace("\n",",").encode("gbk")
+				t=cell.text.replace("\n",",").encode("gbk").strip()
 				if len(row)==1 and row[0]==t:	#读入的word文档格式错乱，有时候会多一列，只能用这样的笨办法跳过
 					continue
 				if len(row)==2 and t not in ["A","C","N","类型"]:
@@ -152,7 +152,7 @@ class main:
 		f=open("../doc/%s" %(filename),"w")
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
-			srow=r.cells[0].text.replace("\n",",").encode("gbk")+"|"+r.cells[6].text.replace("\n",",").encode("gbk")
+			srow=r.cells[0].text.replace("\n",",").encode("gbk").strip()+"|"+r.cells[6].text.replace("\n",",").encode("gbk").strip()
 			print(srow)
 			f.write(srow+"\n")
 			srow=""
