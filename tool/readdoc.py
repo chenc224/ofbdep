@@ -59,6 +59,8 @@ class main:
 		self.gettableinfo("st001.txt")
 	def getinfo6(self):	#开户确认101的数据项
 		self.gettableinfo("st101.txt")
+	def getinfo7(self):	#销户申请002的数据项
+		self.gettableinfo("st002.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
