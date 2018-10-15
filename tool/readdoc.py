@@ -57,6 +57,8 @@ class main:
 		f.close()
 	def getinfo5(self):	#开户申请001及帐户信息修改申请003的数据项
 		self.gettableinfo("st001.txt")
+	def getinfo6(self):	#开户确认101的数据项
+		self.gettableinfo("st101.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
