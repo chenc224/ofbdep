@@ -34,7 +34,7 @@ class main:
 		for l in file("../data/servicetype.txt","r").readlines():
 			rd["servicetype"].append(l.decode("gbk").split("|"))
 	def rd2(self):	#处理各业务的数据项
-		for yw in ["001","101"]:
+		for yw in ["001","101","002"]:
 			rd["st"+yw]=[]
 			for l in file("../data/st%s.txt" %(yw),"r").readlines():
 				d=l.decode("gbk").split("|")
