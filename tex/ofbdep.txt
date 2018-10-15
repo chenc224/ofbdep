@@ -209,17 +209,26 @@ TEXT & 不定长文本 \\ \hline
 
 申请更新账户信息是基金管理人要求注册登记人对账户信息进行补充和完善的申请。
 
-\setlength\LTleft{-5in}
-\setlength\LTright{0pt}
+%\setlength\LTleft{-5in}
+%\setlength\LTright{0pt}
 %\setlength\LTright{-1in plus 1 fill}
-\begin{longtabu}{|l|l|l|X|X|}
-\caption{帐户信息数据} \\ \hline
+
+{% macro st_table(ttitle,tvar) %}	{# 宏，用于产生各业务对应的数据项的表格 #}
+\begin{longtabu}{|l|l|l|X|}
+\caption{ {{ ttitle }} } \\ \hline
 ID & 字段名 & 类型 & 描述 \\ \hline \endfirsthead \hline
 ID & 字段名 & 类型 & 描述 \\ \hline \endhead \hline
-{% for s in st001 %}	{# 业务类型表 #}
+{% for s in tvar %}	{# 业务类型表 #}
 {{ s[0] }} & {{ s[1] }} & {{ s[2] }} & {{ s[3] }} \\ \hline
 {% endfor %}
 \end{longtabu}
+{% endmacro %}
 
+{{ st_table("帐户信息数据",st001) }}
+
+\section{开户确认101}
+开户确认是基金注册登记人对投资人开户申请的处理结果。
+
+{{ st_table("开户确认数据",st101) }}
 
 \end{document}
