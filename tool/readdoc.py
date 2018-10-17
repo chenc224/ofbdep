@@ -61,6 +61,16 @@ class main:
 		self.gettableinfo("st101.txt")
 	def getinfo7(self):	#销户申请002的数据项
 		self.gettableinfo("st002.txt")
+	def getinfo8(self):	#销户确认102等业务的数据项
+		self.gettableinfo("st102.txt")
+	def getinfo9(self):	#账户冻结申请004的数据项
+		self.gettableinfo("st004.txt")
+	def getinfo10(self):	#账户解冻申请005 账户卡解挂申请007
+		self.gettableinfo("st005.txt")
+	def getinfo11(self):	#基金账户卡挂失申请006
+		self.gettableinfo("st006.txt")
+	def getinfo12(self):	#增加交易账户申请008
+		self.gettableinfo("st008.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
