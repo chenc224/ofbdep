@@ -1,28 +1,29 @@
 %-*- coding: UTF-8 -*-
 \documentclass[UTF8,fleqn,hyperref]{ctexrep}
+\usepackage{fancyhdr}
 %\documentclass{article}
 %\usepackage[UTF8,fleqn,hyperref]{ctex}
 \usepackage[text={160mm,230mm},centering]{geometry}
 \setcounter{tocdepth}{1}
-\usepackage{fancyhdr}
 \usepackage{longtable}
 \usepackage{ltxtable}
 \usepackage{tabularx}
 \usepackage{tabu}
 \pagestyle{fancy}
 \title{开放式基金业务数据交换协议}
-%\author{陈川\\chenc224@163.com}
+\author{chenc224@163.com}
 \date{\today}
 \bibliographystyle{plain}
 \usepackage{lettrine}
 \hypersetup{hidelinks}
 \setlength{\headheight}{27pt}
 \begin{document}
-
+\pagenumbering{Alph}
 \maketitle
 \tableofcontents
 \thispagestyle{empty}
 \setcounter{page}{1}
+\pagenumbering{arabic}
 
 \chapter{前言}
 本标准基于《开放式基金业务数据交换协议》（JR/T0017-2012）制定。 
@@ -208,10 +209,6 @@ TEXT & 不定长文本 \\ \hline
 账户信息修改是指对投资人基金账户信息进行修改。
 
 申请更新账户信息是基金管理人要求注册登记人对账户信息进行补充和完善的申请。
-
-%\setlength\LTleft{-5in}
-%\setlength\LTright{0pt}
-%\setlength\LTright{-1in plus 1 fill}
 
 {% macro st_table(ttitle,tvar) %}	{# 宏，用于产生各业务对应的数据项的表格 #}
 \begin{longtabu}{|l|l|l|X|}
