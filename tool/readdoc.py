@@ -71,6 +71,26 @@ class main:
 		self.gettableinfo("st006.txt")
 	def getinfo12(self):	#增加交易账户申请008
 		self.gettableinfo("st008.txt")
+	def getinfo13(self):	#变更交易账号申请058
+		self.gettableinfo("st058.txt")
+	def getinfo14(self):	#变更交易账号确认158
+		self.gettableinfo("st158.txt")
+	def getinfo15(self):	#认购申请(020)，预约认购申请(021)
+		self.gettableinfo("st020.txt")
+	def getinfo16(self):	#认购确认(021)，预约认购确认(121)
+		self.gettableinfo("st021.txt")
+	def getinfo17(self):	#申购申请(022)，预约申购申请(023)，定时定额申购申请(039)
+		self.gettableinfo("st022.txt")
+	def getinfo18(self):	#申购确认(122)，定时定额申购确认(139)
+		srow=""
+		f=open("../doc/%s" %("st122.txt"),"w")
+		for j in range(len(self.t.rows)):
+			r=self.t.rows[j]
+			srow=r.cells[0].text.replace("\n",",").encode("gbk").strip()+"|"+r.cells[7].text.replace("\n",",").encode("gbk").strip()
+			print(srow)
+			f.write(srow+"\n")
+			srow=""
+		f.close()
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
