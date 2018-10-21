@@ -91,6 +91,14 @@ class main:
 			f.write(srow+"\n")
 			srow=""
 		f.close()
+	def getinfo19(self):	#预约申购确认123
+		self.gettableinfo("st123.txt")
+	def getinfo20(self):	#赎回申请(024)，定时定额赎回申请(063)，预约赎回申请(025)
+		self.gettableinfo("st024.txt")
+	def getinfo21(self):	#赎回确认(124)，定时定额赎回确认(163)，强行赎回确认(142)
+		self.gettableinfo("st124.txt")
+	def getinfo22(self):	#预约赎回确认(125)
+		self.gettableinfo("st125.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
