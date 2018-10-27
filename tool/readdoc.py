@@ -31,6 +31,8 @@ class main:
 				if self.arg=="%d" %(i) or self.arg=="all":
 					print("::::::run getinfo%d" %(i))
 					getattr(main,"getinfo%d" %(i))(self)
+	def fmt(self,s):
+		return s.replace("\n",",").encode("gbk").strip()
 	def getfield(self,filename):	#取各文件的字段表
 		srow=""
 		f=open("../doc/%s" %(filename),"w")
@@ -86,7 +88,7 @@ class main:
 		f=open("../doc/%s" %("st122.txt"),"w")
 		for j in range(len(self.t.rows)):
 			r=self.t.rows[j]
-			srow=r.cells[0].text.replace("\n",",").encode("gbk").strip()+"|"+r.cells[7].text.replace("\n",",").encode("gbk").strip()
+			srow=self.fmt(r.cells[0].text)+"|"+self.fmt(r.cells[6].text)+"|"+self.fmt(r.cells[7].text)
 			print(srow)
 			f.write(srow+"\n")
 			srow=""
@@ -192,9 +194,9 @@ class main:
 	def gettableinfo(self,filename):	#取表数据，用于获取交易对应的字段表
 		srow=""
 		f=open("../doc/%s" %(filename),"w")
-		for j in range(len(self.t.rows)):
+		for j in range(1,len(self.t.rows)):
 			r=self.t.rows[j]
-			srow=r.cells[0].text.replace("\n",",").encode("gbk").strip()+"|"+r.cells[6].text.replace("\n",",").encode("gbk").strip()
+			srow=self.fmt(r.cells[0].text)+"|"+self.fmt(r.cells[5].text)+"|"+self.fmt(r.cells[6].text)
 			print(srow)
 			f.write(srow+"\n")
 			srow=""

@@ -28,7 +28,7 @@ class main:
 		tex=file("ofbdep.tex","w")
 		tex.write(tmpl.render(rd).encode("utf8"))
 		tex.close()
-		os.system("pdflatex ofbdep.tex")
+		os.system("xelatex ofbdep.tex")
 	def rd1(self):	#处理基金业务类型表
 		rd["servicetype"]=[]
 		for l in file("../data/servicetype.txt","r").readlines():
@@ -40,7 +40,7 @@ class main:
 				d=l.decode("gbk").split("|")
 				f=self.field[d[0]]
 				h=[]
-				if d[1][0]=="Y":
+				if d[2][0]=="Y":
 					h.append(d[0]+"*")
 				else:
 					h.append(d[0])
@@ -51,6 +51,7 @@ class main:
 					h.append("%s%s" %(f[1],f[2]))
 				h.append(f[4])
 				h.append(f[5])
+				h.append(d[1])
 				rd["st"+yw].append(h)
 rd={}
 main()
