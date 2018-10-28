@@ -105,6 +105,10 @@ class main:
 		self.gettableinfo("st026.txt")
 	def getinfo24(self):	#转销售人/机构确认(126)，转销售人/机构转入确认(127)，转销售人/机构转出确认(128)
 		self.gettableinfo("st126.txt")
+	def getinfo25(self):	#设置分红方式申请029
+		self.gettableinfo("st029.txt")
+	def getinfo26(self):	#设置分红方式确认129
+		self.gettableinfo("st129.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
