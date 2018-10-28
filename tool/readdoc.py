@@ -103,6 +103,8 @@ class main:
 		self.gettableinfo("st125.txt")
 	def getinfo23(self):	#转销售人/机构申请(026)，转销售人/机构转入申请(027)，转销售人/机构转出申请(028)
 		self.gettableinfo("st026.txt")
+	def getinfo24(self):	#转销售人/机构确认(126)，转销售人/机构转入确认(127)，转销售人/机构转出确认(128)
+		self.gettableinfo("st126.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
