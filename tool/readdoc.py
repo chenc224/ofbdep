@@ -109,6 +109,8 @@ class main:
 		self.gettableinfo("st029.txt")
 	def getinfo26(self):	#设置分红方式确认129
 		self.gettableinfo("st129.txt")
+	def getinfo27(self):	#认购结果130
+		self.gettableinfo("st130.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
