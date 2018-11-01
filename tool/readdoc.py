@@ -115,6 +115,8 @@ class main:
 		self.gettableinfo("st031.txt")
 	def getinfo29(self):	#基金份数冻结确认131
 		self.gettableinfo("st131.txt")
+	def getinfo30(self):	#基金份数解冻申请032
+		self.gettableinfo("st032.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
