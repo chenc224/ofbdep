@@ -26,6 +26,8 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
+\small
+
 \chapter{前言}
 本标准基于《开放式基金业务数据交换协议》（JR/T0017-2012）制定。 
 
@@ -215,7 +217,7 @@ TEXT & 不定长文本 \\ \hline
 \hbadness=100000	%避免Underfull \hbox 报警
 
 {% macro st_table(ttitle,tvar) %}	{# 宏，用于产生各业务对应的数据项的表格 #}
-\begin{longtabu}{|l|l|l|X|X|}
+\begin{longtabu}{|l|l|l|X[2]|X[3]|}
 \caption{ {{ ttitle }} } \\ \hline
 ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endfirsthead \hline
 ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endhead \hline
@@ -226,7 +228,7 @@ ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endhead \hline
 {% endmacro %}
 
 {% macro st_table2(ttitle,tvar) %}	{# 宏，用于产生各业务对应的数据项的表格 #}
-\begin{longtabu}{|l|l|l|X|}
+\begin{longtabu}{|l|X|X|X|}
 \caption{ {{ ttitle }} } \\ \hline
 ID & 字段名 & 类型 & 描述\\ \hline \endfirsthead \hline
 ID & 字段名 & 类型 & 描述\\ \hline \endhead \hline
