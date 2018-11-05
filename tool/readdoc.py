@@ -123,6 +123,8 @@ class main:
 		self.gettableinfo("st033.txt")
 	def getinfo33(self):	#非交易过户确认(133)，非交易过户转入确认(134)，非交易过户转出确认(135)
 		self.gettableinfo("st133.txt")
+	def getinfo34(self):	#基金转换申请(036)，基金转换转入申请(037)，基金转换转出申请(038)
+		self.gettableinfo("st036.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
