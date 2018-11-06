@@ -129,6 +129,8 @@ class main:
 		self.gettableinfo("st136.txt")
 	def getinfo36(self):	#红利/红利再投资发放(143)
 		self.gettableinfo("st143.txt")
+	def getinfo37(self):	#强行调增(144) ，强行调减(145)
+		self.gettableinfo("st144.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
