@@ -127,6 +127,8 @@ class main:
 		self.gettableinfo("st036.txt")
 	def getinfo35(self):	#基金转换确认(136)，基金转换转入确认(137)，基金转换转出确认(138)
 		self.gettableinfo("st136.txt")
+	def getinfo36(self):	#红利/红利再投资发放(143)
+		self.gettableinfo("st143.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
