@@ -135,6 +135,8 @@ class main:
 		self.gettableinfo("st146.txt")
 	def getinfo39(self):	#募集失败149
 		self.gettableinfo("st149.txt")
+	def getinfo40(self):	#基金清盘(150)，基金终止(151)
+		self.gettableinfo("st150.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
