@@ -141,6 +141,8 @@ class main:
 		self.gettableinfo("st052.txt")
 	def getinfo42(self):	#撤单确认(152)，撤预约单确认(153)
 		self.gettableinfo("st152.txt")
+	def getinfo43(self):	#无效资金(054)
+		self.gettableinfo("st054.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
