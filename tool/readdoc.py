@@ -145,6 +145,8 @@ class main:
 		self.gettableinfo("st054.txt")
 	def getinfo44(self):	#基金销售人资金清算（155）
 		self.gettableinfo("st155.txt")
+	def getinfo45(self):	#投资人资金清算（156）
+		self.gettableinfo("st156.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
