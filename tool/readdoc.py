@@ -149,6 +149,8 @@ class main:
 		self.gettableinfo("st156.txt")
 	def getinfo46(self):	#红利解冻确认（157）
 		self.gettableinfo("st157.txt")
+	def getinfo47(self):	#定时定额注册申请（059），定时定额注销申请（060）
+		self.gettableinfo("st059.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
