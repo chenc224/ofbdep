@@ -155,6 +155,10 @@ class main:
 		self.gettableinfo("st159.txt")
 	def getinfo49(self):	#定时定额变更申请（061）
 		self.gettableinfo("st061.txt")
+	def getinfo50(self):	#定时定额变更确认（161）
+		self.gettableinfo("st161.txt")
+	def getinfo51(self):	#认购调整申请(062)
+		self.gettableinfo("st062.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
