@@ -161,6 +161,8 @@ class main:
 		self.gettableinfo("st062.txt")
 	def getinfo52(self):	#认购调整确认(162)
 		self.gettableinfo("st162.txt")
+	def getinfo53(self):	#基金联名卡开通申请（067），基金联名卡撤销申请（068）
+		self.gettableinfo("st067.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
