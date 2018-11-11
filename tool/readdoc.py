@@ -171,6 +171,8 @@ class main:
 		self.gettableinfo("st070.txt")
 	def getinfo57(self):	#确权申请080
 		self.gettableinfo("st080.txt")
+	def getinfo58(self):	#确权确认180
+		self.gettableinfo("st180.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
