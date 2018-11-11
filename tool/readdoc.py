@@ -167,6 +167,8 @@ class main:
 		self.gettableinfo("st167.txt")
 	def getinfo55(self):	#积分确认（169）
 		self.gettableinfo("st169.txt")
+	def getinfo56(self):	#地区编号变更通知（070）
+		self.gettableinfo("st070.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
