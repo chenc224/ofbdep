@@ -183,6 +183,8 @@ class main:
 		self.gettableinfo("st188.txt")
 	def getinfo63(self):	#ETF…Íπ∫…Í«Î£®091£©
 		self.gettableinfo("st091.txt")
+	def getinfo64(self):	#ETF Íªÿ…Í«Î£®093£©
+		self.gettableinfo("st093.txt")
 	def getinfo69(self):	#01 ’ ªß…Í«Î
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 ’ ªß»∑»œ
