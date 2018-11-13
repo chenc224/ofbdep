@@ -191,6 +191,8 @@ class main:
 		self.gettableinfo("st192.txt")
 	def getinfo67(self):	#ETF赎回一次确认（193）
 		self.gettableinfo("st193.txt")
+	def getinfo68(self):	#ETF赎回二次确认（194）
+		self.gettableinfo("st194.txt")
 	def getinfo69(self):	#01 帐户申请
 		self.getfield("01.txt")
 	def getinfo70(self):	#02 帐户确认
