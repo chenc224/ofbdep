@@ -12,7 +12,7 @@
 \usepackage{multirow}
 \pagestyle{fancy}
 \title{开放式基金业务数据交换协议}
-\author{chenc224@163.com}
+%\author{chenc224@163.com}
 \date{\today}
 \bibliographystyle{plain}
 \usepackage{lettrine}
@@ -27,6 +27,9 @@
 \pagenumbering{arabic}
 
 \small
+
+\vbadness=100000	%避免Underfull \vbox 报警
+\hbadness=100000	%避免Underfull \hbox 报警
 
 \chapter{前言}
 本标准基于《开放式基金业务数据交换协议》（JR/T0017-2012）制定。 
@@ -120,16 +123,15 @@ ISO 3166 国家和地区代码表
 
 \section{要求}
 \subsection{数据类型定义}
-\begin{table}[!ht]\centering
-\caption{本标准中使用的数据类型定义}
-\begin{tabular}{|c|c|}\hline
+
+\begin{longtabu}{|l|l|}
+\caption{本标准中使用的数据类型定义} \\ \hline
 标识符 & 数据类型 \\ \hline
 C & 字符型 \\ \hline
 A & 数字字符型，限于0—9  \\ \hline
 N & 数值型，其长度不包含小数点，可参与数值计算 \\ \hline
 TEXT & 不定长文本 \\ \hline
-\end{tabular}
-\end{table}
+\end{longtabu}
 
 \subsection{数据处理}
 本标准包括监管部门相关业务规则所要求的数据。数据处理规则为：
@@ -203,6 +205,24 @@ TEXT & 不定长文本 \\ \hline
 {% endfor %}
 \end{longtabu}
 
+\chapter{文件方式接口规范}
+\section{组织结构}
+文件按其中的索引文件分成若干组，每组有一个索引文件和若干个数据文件。
+
+\chapter{数据文件字段}
+{% for t in sjwjzd %}
+\section{ {{ t["section"] }} 文件 }
+\begin{longtabu}{|l|l|l|l|X[2]|X[3]|}
+\caption{ {{ t["section"] }} 文件字段表} \\ \hline
+ID & 字段名 & 类型 & 起始位置 & 描述 & 备注\\ \hline \endfirsthead \hline
+ID & 字段名 & 类型 & 起始位置 & 描述 & 备注\\ \hline \endhead \hline
+{% for s in t["data"] %}
+{{ s[0] }} & {{ s[1] }} & {{ s[2] }} & {{ s[3] }} & {{ s[4] }} & {{ s[5] }} \\ \hline
+{% endfor %}
+\end{longtabu}
+
+{% endfor %}
+
 \chapter{业务交换数据项}
 各业务环节需要交换的数据项分为两类：必需的和非必需的。必需的数据项要求数据交换的各方在进行业务数据交换时必须包含。非必需数据项则由数据交换的各方根据具体情况选择包含或不包含。注意ID后标记有*号表示必需的字段，未标记则非必需字段。
 
@@ -212,9 +232,6 @@ TEXT & 不定长文本 \\ \hline
 账户信息修改是指对投资人基金账户信息进行修改。
 
 申请更新账户信息是基金管理人要求注册登记人对账户信息进行补充和完善的申请。
-
-\vbadness=100000	%避免Underfull \vbox 报警
-\hbadness=100000	%避免Underfull \hbox 报警
 
 {% macro st_table(ttitle,tvar) %}	{# 宏，用于产生各业务对应的数据项的表格 #}
 \begin{longtabu}{|l|l|l|X[2]|X[3]|}
@@ -558,5 +575,12 @@ ETF基金专用的赎回业务类型。ETF基金赎回需要经过两次确认，第一次确认份额，第二次再
 \section{快速过户确认198 快速过户入确认197 快速过户出确认196}
 快速过户申请的处理结果。
 {{ st_table("快速过户确认",st198) }}
+
+\chapter{TA与销售人交换文件清单}
+
+\chapter{数据字典}
+\section{业务字段}
+\section{交易返回码}
+
 
 \end{document}
