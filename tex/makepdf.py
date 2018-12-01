@@ -54,5 +54,31 @@ class main:
 				h.append(f[5])
 				h.append(d[1])
 				rd["st"+yw].append(h)
+	def rd3(self):	#处理 数据文件字段 sjwjzd
+		rd["sjwjzd"]=[]
+		for wj in ["07",]:
+			data=[]
+			wz=1	#位置
+			for l in file("../data/%s.txt" %(wj),"r").readlines():
+				d=l.decode("gbk").split("|")
+				f=self.field[d[0]]
+				h=[]
+				if len(d)==8 and d[6][0]=='Y':	#最后一列是“是否必需”而且是Y
+					h.append(d[0]+"*")
+				else:
+					h.append(d[0])
+				h.append(f[0])
+				if f[1]=="N":
+					h.append("%s%s.%s" %(f[1],f[2],f[3]))
+				else:
+					h.append("%s%s" %(f[1],f[2]))
+				h.append("%d" %(wz))
+				wz=wz+int(f[2])
+				h.append(f[4])
+				h.append(f[5])
+				h.append(d[5])
+				data.append(h)
+		rd["sjwjzd"].append({"section":wj,"data":data})
+
 rd={}
 main()
