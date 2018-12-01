@@ -36,7 +36,7 @@ class main:
 	def getfield(self,filename):	#取各文件的字段表
 		srow=""
 		f=open("../doc/%s" %(filename),"w")
-		for j in range(len(self.t.rows)):
+		for j in range(1,len(self.t.rows)):
 			r=self.t.rows[j]
 			for cell in r.cells:
 				t=cell.text.replace("\n",",").encode("gbk")
