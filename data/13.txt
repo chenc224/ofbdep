@@ -1,0 +1,7 @@
+67|FundCode|C|6|基金代码||Y|
+121|DistributorCode|C|9|销售人代码|	|Y|
+135|BusinessCode|A|3|业务代码|编码见表4|Y|
+143|AggregationOfTransactionByBusinessType|N|8|每种业务笔数汇总||Y|
+144|AggregationDate|A|8|汇总日期|格式为：YYYYMMDD|Y|
+154|TotalSuccessfulVol|N|16（两位小数）|份数汇总||Y|
+175|TotalSuccessfulAmount|N|16（两位小数）|金额汇总||Y|
