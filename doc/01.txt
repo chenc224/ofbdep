@@ -1,4 +1,3 @@
-ID|字段名|类型|长度|描述|备注|
 4|Address|C|120|通讯地址||
 5|InstReprIDCode|C|30|法人代表身份证件代码||
 6|InstReprIDType|C|1|法人代表证件类型||
