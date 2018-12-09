@@ -234,17 +234,17 @@ class main:
 	def getinfo88(self):	#R2 非居民涉税信息确认
 		self.getfield("R2.txt")
 	def getinfo89(self):	#c1 基金基础参数
-		self.getfield("c1.txt")
+		self.getfield("C1.txt")
 	def getinfo90(self):	#c2 基金代理关系
-		self.getfield("c2.txt")
+		self.getfield("C2.txt")
 	def getinfo91(self):	#c3 基金转换关系参数
-		self.getfield("c3.txt")
+		self.getfield("C3.txt")
 	def getinfo92(self):	#c4 基金分红方案参数 注意取到的c4文件有问题
-		self.getfield("c4.txt")
+		self.getfield("C4.txt")
 	def getinfo93(self):	#c5 基金费率
-		self.getfield("c5.txt")
+		self.getfield("C5.txt")
 	def getinfo94(self):	#c6 理财产品可赎回日期
-		self.getfield("c6.txt")
+		self.getfield("C6.txt")
 	def getinfo95(self):	#取数据字典表
 		srow=""
 		row=[]
