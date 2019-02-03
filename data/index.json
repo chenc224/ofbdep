@@ -1,0 +1,607 @@
+[
+    {
+        "datafile": [
+            {
+                "describe": "帐户类交易申请", 
+                "business": [
+                    {
+                        "code": "001", 
+                        "equcode": "001", 
+                        "describe": "开户申请"
+                    }, 
+                    {
+                        "code": "003", 
+                        "equcode": "001", 
+                        "describe": "账户信息修改申请"
+                    }, 
+                    {
+                        "code": "002", 
+                        "equcode": "002", 
+                        "describe": "销户申请"
+                    }, 
+                    {
+                        "code": "009", 
+                        "equcode": "002", 
+                        "describe": "撤销交易账户申请"
+                    }, 
+                    {
+                        "code": "008", 
+                        "equcode": "008", 
+                        "describe": "增加交易账户申请"
+                    }, 
+                    {
+                        "code": "058", 
+                        "equcode": "008", 
+                        "describe": "变更交易账号"
+                    }
+                ], 
+                "mark": "01"
+            }, 
+            {
+                "describe": "份额类交易申请", 
+                "business": [
+                    {
+                        "code": "020", 
+                        "equcode": "020", 
+                        "describe": "认购申请"
+                    }, 
+                    {
+                        "code": "022", 
+                        "equcode": "022", 
+                        "describe": "申购申请"
+                    }, 
+                    {
+                        "code": "039", 
+                        "equcode": "022", 
+                        "describe": "定时定额申购申请"
+                    }, 
+                    {
+                        "code": "091", 
+                        "equcode": "022", 
+                        "describe": "ETF申购申请"
+                    }, 
+                    {
+                        "code": "024", 
+                        "equcode": "024", 
+                        "describe": "赎回申请"
+                    }, 
+                    {
+                        "code": "025", 
+                        "equcode": "024", 
+                        "describe": "预约赎回申请"
+                    }, 
+                    {
+                        "code": "063", 
+                        "equcode": "024", 
+                        "describe": "定时定额赎回申请"
+                    }, 
+                    {
+                        "code": "093", 
+                        "equcode": "024", 
+                        "describe": "ETF赎回申请"
+                    }, 
+                    {
+                        "code": "026", 
+                        "equcode": "026", 
+                        "describe": "转销售人/机构申请"
+                    }, 
+                    {
+                        "code": "027", 
+                        "equcode": "026", 
+                        "describe": "转销售人/机构转入申请"
+                    }, 
+                    {
+                        "code": "028", 
+                        "equcode": "026", 
+                        "describe": "转销售人/机构转出申请"
+                    }, 
+                    {
+                        "code": "029", 
+                        "equcode": "029", 
+                        "describe": "设置自动再投资申请"
+                    }, 
+                    {
+                        "code": "031", 
+                        "equcode": "031", 
+                        "describe": "基金份额冻结申请"
+                    }, 
+                    {
+                        "code": "032", 
+                        "equcode": "032", 
+                        "describe": "基金份额解冻申请"
+                    }, 
+                    {
+                        "code": "036", 
+                        "equcode": "036", 
+                        "describe": "基金转换申请"
+                    }, 
+                    {
+                        "code": "037", 
+                        "equcode": "036", 
+                        "describe": "基金转换转入申请"
+                    }, 
+                    {
+                        "code": "038", 
+                        "equcode": "036", 
+                        "describe": "基金转换转出申请"
+                    }, 
+                    {
+                        "code": "053", 
+                        "equcode": "053", 
+                        "describe": "撤预约单"
+                    }, 
+                    {
+                        "code": "059", 
+                        "equcode": "059", 
+                        "describe": "定时定额申购开通申请"
+                    }, 
+                    {
+                        "code": "060", 
+                        "equcode": "059", 
+                        "describe": "定时定额申购撤销申请"
+                    }, 
+                    {
+                        "code": "061", 
+                        "equcode": "059", 
+                        "describe": "定时定额变更申请"
+                    }, 
+                    {
+                        "code": "062", 
+                        "equcode": "062", 
+                        "describe": "认购调整申请"
+                    }, 
+                    {
+                        "code": "088", 
+                        "equcode": "088", 
+                        "describe": "基金质押申请"
+                    }, 
+                    {
+                        "code": "098", 
+                        "equcode": "088", 
+                        "describe": "快速过户申请"
+                    }
+                ], 
+                "mark": "03"
+            }, 
+            {
+                "describe": "其它交易申请", 
+                "business": [
+                    {
+                        "code": "080", 
+                        "equcode": "080", 
+                        "describe": "确权申请"
+                    }, 
+                    {
+                        "code": "067", 
+                        "equcode": "067", 
+                        "describe": "基金联名卡开通申请"
+                    }, 
+                    {
+                        "code": "068", 
+                        "equcode": "067", 
+                        "describe": "基金联名卡撤销申请"
+                    }, 
+                    {
+                        "code": "070", 
+                        "equcode": "070", 
+                        "describe": "地区编号变更通知"
+                    }
+                ], 
+                "mark": "23"
+            }, 
+            {
+                "describe": "业务申请汇总", 
+                "business": [], 
+                "mark": "13"
+            }, 
+            {
+                "describe": "非居民涉税信息", 
+                "business": [], 
+                "mark": "R1"
+            }
+        ], 
+        "describe": "申请数据", 
+        "recv": "注册登记", 
+        "send": "销售商", 
+        "mark": "OFI"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "33文件", 
+                "business": [], 
+                "mark": "33"
+            }
+        ], 
+        "describe": "T日过户业务申报批次", 
+        "recv": "注册登记", 
+        "send": "销售商", 
+        "mark": "OFT"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "基金行情", 
+                "business": [], 
+                "mark": "07"
+            }, 
+            {
+                "describe": "公告", 
+                "business": [], 
+                "mark": "08"
+            }, 
+            {
+                "describe": "参与人及结算席位", 
+                "business": [], 
+                "mark": "21"
+            }
+        ], 
+        "describe": "行情、公告、席位等数据", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFJ"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "业务申请汇总", 
+                "business": [], 
+                "mark": "11"
+            }
+        ], 
+        "describe": "11文件", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFS"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "账户类交易确认", 
+                "business": [
+                    {
+                        "code": "101", 
+                        "equcode": "101", 
+                        "describe": "开户确认"
+                    }, 
+                    {
+                        "code": "102", 
+                        "equcode": "102", 
+                        "describe": "销户确认"
+                    }, 
+                    {
+                        "code": "103", 
+                        "equcode": "102", 
+                        "describe": "账户信息修改确认"
+                    }, 
+                    {
+                        "code": "108", 
+                        "equcode": "102", 
+                        "describe": "增加交易账户确认"
+                    }, 
+                    {
+                        "code": "158", 
+                        "equcode": "102", 
+                        "describe": "变更交易账号确认"
+                    }, 
+                    {
+                        "code": "109", 
+                        "equcode": "102", 
+                        "describe": "撤销交易账户确认"
+                    }
+                ], 
+                "mark": "02"
+            }, 
+            {
+                "describe": "份额类交易确认", 
+                "business": [
+                    {
+                        "code": "120", 
+                        "equcode": "120", 
+                        "describe": "认购确认"
+                    }, 
+                    {
+                        "code": "122", 
+                        "equcode": "122", 
+                        "describe": "申购确认"
+                    }, 
+                    {
+                        "code": "139", 
+                        "equcode": "122", 
+                        "describe": "定时定额申购确认"
+                    }, 
+                    {
+                        "code": "191", 
+                        "equcode": "122", 
+                        "describe": "ETF申购一次确认"
+                    }, 
+                    {
+                        "code": "192", 
+                        "equcode": "122", 
+                        "describe": "ETF申购二次确认"
+                    }, 
+                    {
+                        "code": "124", 
+                        "equcode": "124", 
+                        "describe": "赎回确认"
+                    }, 
+                    {
+                        "code": "142", 
+                        "equcode": "124", 
+                        "describe": "强行赎回确认"
+                    }, 
+                    {
+                        "code": "163", 
+                        "equcode": "124", 
+                        "describe": "定时定额赎回确认"
+                    }, 
+                    {
+                        "code": "193", 
+                        "equcode": "124", 
+                        "describe": "ETF赎回一次确认"
+                    }, 
+                    {
+                        "code": "194", 
+                        "equcode": "124", 
+                        "describe": "ETF赎回二次确认"
+                    }, 
+                    {
+                        "code": "125", 
+                        "equcode": "124", 
+                        "describe": "预约赎回确认"
+                    }, 
+                    {
+                        "code": "126", 
+                        "equcode": "126", 
+                        "describe": "转销售人/机构确认"
+                    }, 
+                    {
+                        "code": "127", 
+                        "equcode": "126", 
+                        "describe": "转销售人/机构转入确认"
+                    }, 
+                    {
+                        "code": "128", 
+                        "equcode": "126", 
+                        "describe": "转销售人/机构转出确认"
+                    }, 
+                    {
+                        "code": "129", 
+                        "equcode": "129", 
+                        "describe": "设置自动再投资确认"
+                    }, 
+                    {
+                        "code": "130", 
+                        "equcode": "130", 
+                        "describe": "认购结果"
+                    }, 
+                    {
+                        "code": "131", 
+                        "equcode": "131", 
+                        "describe": "基金份额冻结确认"
+                    }, 
+                    {
+                        "code": "132", 
+                        "equcode": "132", 
+                        "describe": "基金份额解冻确认"
+                    }, 
+                    {
+                        "code": "157", 
+                        "equcode": "157", 
+                        "describe": "基金红利解冻确认"
+                    }, 
+                    {
+                        "code": "134", 
+                        "equcode": "134", 
+                        "describe": "非交易过户转入确认"
+                    }, 
+                    {
+                        "code": "135", 
+                        "equcode": "134", 
+                        "describe": "非交易过户转出确认"
+                    }, 
+                    {
+                        "code": "137", 
+                        "equcode": "137", 
+                        "describe": "基金转换转入确认"
+                    }, 
+                    {
+                        "code": "138", 
+                        "equcode": "138", 
+                        "describe": "基金转换转出确认"
+                    }, 
+                    {
+                        "code": "153", 
+                        "equcode": "153", 
+                        "describe": "撤预约单确认"
+                    }, 
+                    {
+                        "code": "144", 
+                        "equcode": "144", 
+                        "describe": "强行调增"
+                    }, 
+                    {
+                        "code": "145", 
+                        "equcode": "144", 
+                        "describe": "强行调减"
+                    }, 
+                    {
+                        "code": "162", 
+                        "equcode": "162", 
+                        "describe": "认购调整确认"
+                    }, 
+                    {
+                        "code": "159", 
+                        "equcode": "162", 
+                        "describe": "定时定额申购开通确认"
+                    }, 
+                    {
+                        "code": "160", 
+                        "equcode": "162", 
+                        "describe": "定时定额申购撤销确认"
+                    }, 
+                    {
+                        "code": "161", 
+                        "equcode": "162", 
+                        "describe": "定时定额变更确认"
+                    }, 
+                    {
+                        "code": "188", 
+                        "equcode": "188", 
+                        "describe": "基金质押确认"
+                    }, 
+                    {
+                        "code": "198", 
+                        "equcode": "188", 
+                        "describe": "快速过户确认"
+                    }, 
+                    {
+                        "code": "149", 
+                        "equcode": "149", 
+                        "describe": "募集失败"
+                    }, 
+                    {
+                        "code": "150", 
+                        "equcode": "149", 
+                        "describe": "基金清盘"
+                    }, 
+                    {
+                        "code": "151", 
+                        "equcode": "149", 
+                        "describe": "基金终止"
+                    }
+                ], 
+                "mark": "04"
+            }, 
+            {
+                "describe": "份额对帐", 
+                "business": [], 
+                "mark": "05"
+            }, 
+            {
+                "describe": "基金分红", 
+                "business": [], 
+                "mark": "06"
+            }, 
+            {
+                "describe": "红利汇总", 
+                "business": [], 
+                "mark": "09"
+            }, 
+            {
+                "describe": "业务确认汇总", 
+                "business": [], 
+                "mark": "12"
+            }, 
+            {
+                "describe": "其它类确认", 
+                "business": [
+                    {
+                        "code": "180", 
+                        "equcode": "180", 
+                        "describe": "确权确认"
+                    }, 
+                    {
+                        "code": "167", 
+                        "equcode": "167", 
+                        "describe": "基金联名卡开通确认"
+                    }, 
+                    {
+                        "code": "168", 
+                        "equcode": "167", 
+                        "describe": "基金联名卡撤销确认"
+                    }, 
+                    {
+                        "code": "169", 
+                        "equcode": "169", 
+                        "describe": "积分确认"
+                    }
+                ], 
+                "mark": "24"
+            }, 
+            {
+                "describe": "理财产品份额明细", 
+                "business": [], 
+                "mark": "26"
+            }, 
+            {
+                "describe": "非居民涉税信息确认", 
+                "business": [], 
+                "mark": "R2"
+            }
+        ], 
+        "describe": "确认数据", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFI"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "资金清算", 
+                "business": [], 
+                "mark": "25"
+            }, 
+            {
+                "describe": "日交割汇总", 
+                "business": [], 
+                "mark": "10"
+            }
+        ], 
+        "describe": "25/10类资金文件", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFK"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "基金基础参数", 
+                "business": [], 
+                "mark": "C1"
+            }, 
+            {
+                "describe": "基金代理关系", 
+                "business": [], 
+                "mark": "C2"
+            }, 
+            {
+                "describe": "基金转换关系", 
+                "business": [], 
+                "mark": "C3"
+            }, 
+            {
+                "describe": "基金分红方案", 
+                "business": [], 
+                "mark": "C4"
+            }, 
+            {
+                "describe": "基金费率", 
+                "business": [], 
+                "mark": "C5"
+            }, 
+            {
+                "describe": "理财产品可赎回日期", 
+                "business": [], 
+                "mark": "C6"
+            }
+        ], 
+        "describe": "参数类文件", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFC"
+    }, 
+    {
+        "datafile": [
+            {
+                "describe": "提前回报", 
+                "business": [], 
+                "mark": "04"
+            }
+        ], 
+        "describe": "提前回报", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFF"
+    }
+]
