@@ -642,9 +642,17 @@ ETF基金专用的赎回业务类型。ETF基金赎回需要经过两次确认，第一次确认份额，第二次再
 快速过户申请的处理结果。
 {{ st_table("快速过户确认",st198) }}
 
-\chapter{TA与销售人交换文件清单}
-
 \chapter{数据字典}
+\section{数据文件业务类型清单}
+
+\begin{longtabu}{|l|l|l|l|}
+\caption{索引文件清单} \\ \hline
+索引 & 发送方 & 接收方 & 描述 \\ \hline
+{% for fb in fbindex %}
+{{ fb["mark"] }} & {{ fb["send"] }} & {{ fb["recv"] }} & {{ fb["describe"] }} \\ \hline
+{% endfor %}
+\end{longtabu}
+
 \section{业务字段}
 \section{交易返回码}
 
