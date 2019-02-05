@@ -2,15 +2,18 @@
 # -*- coding: cp936 -*-
 
 import datetime
+import jinja2
+import json
 import os
 import shutil
 import sys
 import time
-import jinja2
 
 def cpt(t):
 	import json
 	print(json.dumps(t,encoding="gbk",ensure_ascii=False))
+
+rd={}
 
 class main:
 	def __init__(self):
@@ -20,6 +23,7 @@ class main:
 		for l in file("../data/field.txt","r").readlines():
 			d=l.decode("gbk").split("|")
 			self.field[d[0]]=[d[1],d[2],d[3],d[4],d[5],d[6]]
+		rd["fbindex"]=json.load(open("../data/index.json",'r'),encoding="gbk")	#数据文件、业务类型清单
 		for i in range(100):
 			if hasattr(main,"rd%d" %(i)):
 				getattr(main,"rd%d" %(i))(self)
@@ -80,5 +84,4 @@ class main:
 				data.append(h)
 		rd["sjwjzd"].append({"section":wj,"data":data})
 
-rd={}
 main()
