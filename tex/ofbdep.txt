@@ -273,7 +273,19 @@ TEXT & 不定长文本 \\ \hline
 结束标识 & 8 & OFDCFEND & 表示文件结束 \\ \hline
 \end{longtabu}
 
-	
+\section{文件清单}
+
+\begin{longtabu}{|l|l|l|l|l|}
+\caption{文件清单} \\ \hline
+索引 & 发送方 & 接收方 & 数据文件 & 描述 \\ \hline \endfirsthead \hline
+索引 & 发送方 & 接收方 & 数据文件 & 描述 \\ \hline \endhead \hline
+{% for fb in fbindex %}
+{{ fb["mark"] }} & {{ fb["send"] }} & {{ fb["recv"] }} & & {{ fb["describe"] }} \\ \hline
+{% for df in fb["datafile"] %}
+& & & {{ df["mark"] }} & {{ df["describe"] }} \\ \hline
+{% endfor %}
+{% endfor %}
+\end{longtabu}
 
 \chapter{数据文件字段}
 {% for t in sjwjzd %}
@@ -286,11 +298,25 @@ ID & 字段名 & 类型 & 起始位置 & 描述 & 备注\\ \hline \endhead \hline
 {{ s[0] }} & {{ s[1] }} & {{ s[2] }} & {{ s[3] }} & {{ s[4] }} & {{ s[5] }} \\ \hline
 {% endfor %}
 \end{longtabu}
-
 {% endfor %}
 
 \chapter{业务交换数据项}
-各业务环节需要交换的数据项分为两类：必需的和非必需的。必需的数据项要求数据交换的各方在进行业务数据交换时必须包含。非必需数据项则由数据交换的各方根据具体情况选择包含或不包含。注意ID后标记有*号表示必需的字段，未标记则非必需字段。
+	有些数据文件中有多个业务类型的数据，不同的业务类型需要的字段不尽相同，本章按业务类型列出所需要交换的数据项。有些业务类型需要的字段相同，就合并在一起，定义同一个主业务类型。
+
+\begin{longtabu}{|l|l|l|l|}
+\caption{业务类型清单} \\ \hline
+数据文件 & 主业务类型 & 业务类型 & 描述 \\ \hline \endfirsthead \hline
+数据文件 & 主业务类型 & 业务类型 & 描述 \\ \hline \endhead \hline
+{% for fb in fbindex %}
+{% for df in fb["datafile"] %}
+{% for bs in df["business"] %}
+{{ df["mark"] }} & {{ bs["equcode"] }} & {{ bs["code"] }} & {{ bs["describe"] }} \\ \hline
+{% endfor %}
+{% endfor %}
+{% endfor %}
+\end{longtabu}
+
+	各业务环节需要交换的数据项分为两类：必需的和非必需的。必需的数据项要求数据交换的各方在进行业务数据交换时必须包含。非必需数据项则由数据交换的各方根据具体情况选择包含或不包含。注意ID后标记有*号表示必需的字段，未标记则非必需字段。
 
 \section{开户申请001,帐户信息修改申请003}
 开户是基金注册登记人为投资人开立基金账户的业务。投资人在参与基金认购、申购、赎回之前必须到基金管理人在各地的直销网点或代理点申请开立账户。账户用于记载投资人的基金所有权及其变更。 
@@ -643,15 +669,7 @@ ETF基金专用的赎回业务类型。ETF基金赎回需要经过两次确认，第一次确认份额，第二次再
 {{ st_table("快速过户确认",st198) }}
 
 \chapter{数据字典}
-\section{数据文件业务类型清单}
 
-\begin{longtabu}{|l|l|l|l|}
-\caption{索引文件清单} \\ \hline
-索引 & 发送方 & 接收方 & 描述 \\ \hline
-{% for fb in fbindex %}
-{{ fb["mark"] }} & {{ fb["send"] }} & {{ fb["recv"] }} & {{ fb["describe"] }} \\ \hline
-{% endfor %}
-\end{longtabu}
 
 \section{业务字段}
 \section{交易返回码}
