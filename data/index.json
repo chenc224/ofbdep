@@ -127,7 +127,7 @@
                     }, 
                     {
                         "code": "053", 
-                        "equcode": "053", 
+                        "equcode": "052", 
                         "describe": "撤预约单"
                     }, 
                     {
@@ -603,5 +603,23 @@
         "recv": "销售商", 
         "send": "注册登记", 
         "mark": "OFF"
+    },
+    {
+        "datafile": [
+            {
+                "describe": "交易回报", 
+                "business": [], 
+                "mark": "34"
+            },
+            {
+                "describe": "份额对账", 
+                "business": [], 
+                "mark": "35"
+            }
+        ], 
+        "describe": "业务回报", 
+        "recv": "销售商", 
+        "send": "注册登记", 
+        "mark": "OFB"
     }
 ]
