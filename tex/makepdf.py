@@ -39,7 +39,13 @@ class main:
 		for l in file("../data/servicetype.txt","r").readlines():
 			rd["servicetype"].append(l.decode("gbk").split("|"))
 	def rd2(self):	#处理各业务的数据项
-		for yw in ["001","101","002","102","004","005","006","008","058","158","020","021","022","122","123","024","124","125","026","126","029","129","130","031","131","032","132","033","133","036","136","143","144","146","149","150","052","152","054","155","156","157","059","159","061","161","062","162","067","167","169","070","080","180","098","198","088","188","091","093","191","192","193","194"]:
+		businesslist=[]
+		for fb in rd["fbindex"]:
+			for df in fb["datafile"]:
+				for bs in df["business"]:
+					if bs["equcode"] not in businesslist:businesslist.append(bs["equcode"].encode("gbk"))
+		print(businesslist)
+		for yw in businesslist:
 			rd["st"+yw]=[]
 			for l in file("../data/st%s.txt" %(yw),"r").readlines():
 				d=l.decode("gbk").split("|")

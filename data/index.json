@@ -25,6 +25,26 @@
                         "describe": "撤销交易账户申请"
                     }, 
                     {
+                        "code": "004", 
+                        "equcode": "004", 
+                        "describe": "账户冻结申请"
+                    }, 
+                    {
+                        "code": "005", 
+                        "equcode": "005", 
+                        "describe": "账户解冻申请"
+                    }, 
+                    {
+                        "code": "007", 
+                        "equcode": "005", 
+                        "describe": "账户卡解挂申请"
+                    }, 
+                    {
+                        "code": "006", 
+                        "equcode": "006", 
+                        "describe": "账户卡挂失申请"
+                    }, 
+                    {
                         "code": "008", 
                         "equcode": "008", 
                         "describe": "增加交易账户申请"
@@ -57,7 +77,7 @@
                     }, 
                     {
                         "code": "091", 
-                        "equcode": "022", 
+                        "equcode": "091", 
                         "describe": "ETF申购申请"
                     }, 
                     {
@@ -77,7 +97,7 @@
                     }, 
                     {
                         "code": "093", 
-                        "equcode": "024", 
+                        "equcode": "093", 
                         "describe": "ETF赎回申请"
                     }, 
                     {
@@ -111,6 +131,21 @@
                         "describe": "基金份额解冻申请"
                     }, 
                     {
+                        "code": "033", 
+                        "equcode": "033", 
+                        "describe": "非交易过户申请"
+                    }, 
+                    {
+                        "code": "034", 
+                        "equcode": "033", 
+                        "describe": "非交易过户转入申请"
+                    }, 
+                    {
+                        "code": "035", 
+                        "equcode": "033", 
+                        "describe": "非交易过户转出申请"
+                    }, 
+                    {
                         "code": "036", 
                         "equcode": "036", 
                         "describe": "基金转换申请"
@@ -131,6 +166,11 @@
                         "describe": "撤预约单"
                     }, 
                     {
+                        "code": "058", 
+                        "equcode": "058", 
+                        "describe": "变更交易帐号申请"
+                    }, 
+                    {
                         "code": "059", 
                         "equcode": "059", 
                         "describe": "定时定额申购开通申请"
@@ -142,7 +182,7 @@
                     }, 
                     {
                         "code": "061", 
-                        "equcode": "059", 
+                        "equcode": "061", 
                         "describe": "定时定额变更申请"
                     }, 
                     {
@@ -157,7 +197,7 @@
                     }, 
                     {
                         "code": "098", 
-                        "equcode": "088", 
+                        "equcode": "098", 
                         "describe": "快速过户申请"
                     }
                 ], 
@@ -306,18 +346,28 @@
                         "describe": "申购确认"
                     }, 
                     {
+                        "code": "123", 
+                        "equcode": "123", 
+                        "describe": "预约申购确认"
+                    }, 
+                    {
+                        "code": "125", 
+                        "equcode": "125", 
+                        "describe": "预约赎回确认"
+                    }, 
+                    {
                         "code": "139", 
                         "equcode": "122", 
                         "describe": "定时定额申购确认"
                     }, 
                     {
                         "code": "191", 
-                        "equcode": "122", 
+                        "equcode": "191", 
                         "describe": "ETF申购一次确认"
                     }, 
                     {
                         "code": "192", 
-                        "equcode": "122", 
+                        "equcode": "192", 
                         "describe": "ETF申购二次确认"
                     }, 
                     {
@@ -337,12 +387,12 @@
                     }, 
                     {
                         "code": "193", 
-                        "equcode": "124", 
+                        "equcode": "193", 
                         "describe": "ETF赎回一次确认"
                     }, 
                     {
                         "code": "194", 
-                        "equcode": "124", 
+                        "equcode": "194", 
                         "describe": "ETF赎回二次确认"
                     }, 
                     {
@@ -391,28 +441,38 @@
                         "describe": "基金红利解冻确认"
                     }, 
                     {
+                        "code": "133", 
+                        "equcode": "133", 
+                        "describe": "非交易过户确认"
+                    }, 
+                    {
                         "code": "134", 
-                        "equcode": "134", 
+                        "equcode": "133", 
                         "describe": "非交易过户转入确认"
                     }, 
                     {
                         "code": "135", 
-                        "equcode": "134", 
+                        "equcode": "133", 
                         "describe": "非交易过户转出确认"
                     }, 
                     {
+                        "code": "136", 
+                        "equcode": "136", 
+                        "describe": "基金转换转入确认"
+                    }, 
+                    {
                         "code": "137", 
-                        "equcode": "137", 
+                        "equcode": "136", 
                         "describe": "基金转换转入确认"
                     }, 
                     {
                         "code": "138", 
-                        "equcode": "138", 
+                        "equcode": "136", 
                         "describe": "基金转换转出确认"
                     }, 
                     {
                         "code": "153", 
-                        "equcode": "153", 
+                        "equcode": "152", 
                         "describe": "撤预约单确认"
                     }, 
                     {
@@ -426,23 +486,43 @@
                         "describe": "强行调减"
                     }, 
                     {
+                        "code": "146", 
+                        "equcode": "146", 
+                        "describe": "配号"
+                    }, 
+                    {
+                        "code": "150", 
+                        "equcode": "150", 
+                        "describe": "基金清盘"
+                    }, 
+                    {
+                        "code": "151", 
+                        "equcode": "150", 
+                        "describe": "基金终止"
+                    }, 
+                    {
+                        "code": "158", 
+                        "equcode": "158", 
+                        "describe": "变更交易帐号确认"
+                    }, 
+                    {
                         "code": "162", 
                         "equcode": "162", 
                         "describe": "认购调整确认"
                     }, 
                     {
                         "code": "159", 
-                        "equcode": "162", 
+                        "equcode": "159", 
                         "describe": "定时定额申购开通确认"
                     }, 
                     {
                         "code": "160", 
-                        "equcode": "162", 
+                        "equcode": "159", 
                         "describe": "定时定额申购撤销确认"
                     }, 
                     {
                         "code": "161", 
-                        "equcode": "162", 
+                        "equcode": "161", 
                         "describe": "定时定额变更确认"
                     }, 
                     {
@@ -452,7 +532,7 @@
                     }, 
                     {
                         "code": "198", 
-                        "equcode": "188", 
+                        "equcode": "198", 
                         "describe": "快速过户确认"
                     }, 
                     {
@@ -480,7 +560,13 @@
             }, 
             {
                 "describe": "基金分红", 
-                "business": [], 
+                "business": [
+                    {
+                        "code": "143", 
+                        "equcode": "143", 
+                        "describe": "红利/红利再投资发放"
+                    }
+                ], 
                 "mark": "06"
             }, 
             {
