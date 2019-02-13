@@ -44,7 +44,6 @@ class main:
 			for df in fb["datafile"]:
 				for bs in df["business"]:
 					if bs["equcode"] not in businesslist:businesslist.append(bs["equcode"].encode("gbk"))
-		print(businesslist)
 		for yw in businesslist:
 			rd["st"+yw]=[]
 			for l in file("../data/st%s.txt" %(yw),"r").readlines():
@@ -66,9 +65,20 @@ class main:
 				rd["st"+yw].append(h)
 	def rd3(self):	#处理 数据文件字段 sjwjzd
 		rd["sjwjzd"]=[]
-		for wj in ["07",]:
+		filelist=[]
+		fileinfo={}
+		for fb in rd["fbindex"]:
+			for df in fb["datafile"]:
+				if df["mark"] not in filelist:
+					filelist.append(df["mark"])
+					fileinfo[df["mark"]]=df["describe"]
+		filelist.sort()
+		for wj in filelist:
 			data=[]
 			wz=1	#位置
+			print("处理%s" %(wj.encode("gbk")))
+			if not os.path.isfile("../data/%s.txt" %(wj)):
+				continue
 			for l in file("../data/%s.txt" %(wj),"r").readlines():
 				d=l.decode("gbk").split("|")
 				f=self.field[d[0]]
@@ -88,6 +98,6 @@ class main:
 				h.append(f[5])
 				h.append(d[5])
 				data.append(h)
-		rd["sjwjzd"].append({"section":wj,"data":data})
+			rd["sjwjzd"].append({"section":wj+fileinfo[wj],"data":data})
 
 main()
