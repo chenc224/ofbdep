@@ -30,7 +30,7 @@ ID|字段名|类型|||描述|备注|
 30|TransferDateFromCustodian|A|8||清算资金自托管人处划出日期|格式为：YYYYMMDD|
 31|TransferDateThroughClearingAgency|A|8||清算资金经清算人划出日期|格式为：YYYYMMDD|
 32|TransactionCfmDate|A|8||交易确认日期|格式为：YYYYMMDD|
-33|AnnContent|C|||公告内容||
+33|AnnContent|C|4000||公告内容||
 34|CodeOfTargetFund|A|6||转换时的目标基金代码||
 35|MinAmountByInst|N|16|0|法人首次认购最低金额||
 36|MinVolByInst|N|16|0|法人首次认购最低份数||
