@@ -7,5 +7,5 @@
 154|TotalSuccessfulVol|N|16（两位小数）|成功份数汇总||Y|
 174|TotalFailingAmount|N|16（两位小数）|失败金额汇总||Y|
 175|TotalSuccessfulAmount|N|16（两位小数）|成功金额汇总||Y|
-178 |TotalFailingDealingNum|N|6|失败交易笔数||Y|
+178|TotalFailingDealingNum|N|6|失败交易笔数||Y|
 179|TotalSuccessfulDealingNum|N|6|成功交易笔数||Y|
