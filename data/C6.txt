@@ -1,0 +1,5 @@
+67|FundCode|C|6|基金代码||Y|
+260|ShareClass|A|1|收费方式|0-前收费，1-后收费|Y|
+274|ShareRegisterDate|A|8|份额注册日期||Y|
+618|AllowRedemptDate|A|8|可赎回日期|可提交赎回申请的日期|Y|
+619|AddFlag|C|1|增删标志|0-作废，1-新增|Y|
