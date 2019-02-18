@@ -20,6 +20,7 @@ class main:
 		self.main()
 	def main(self):
 		self.field={}
+		rd["fieldlist"]=[]
 		for l in file("../data/field.txt","r").readlines():
 			d=l.decode("gbk").split("|")
 			self.field[d[0]]=[d[1],d[2],d[3],d[4],d[5],d[6]]
@@ -48,6 +49,7 @@ class main:
 			rd["st"+yw]=[]
 			for l in file("../data/st%s.txt" %(yw),"r").readlines():
 				d=l.decode("gbk").split("|")
+				print(yw,d)
 				f=self.field[d[0]]
 				h=[]
 				if d[2][0]=="Y":
@@ -76,7 +78,6 @@ class main:
 		for wj in filelist:
 			data=[]
 			wz=1	#位置
-			print("处理%s" %(wj.encode("gbk")))
 			if not os.path.isfile("../data/%s.txt" %(wj)):
 				continue
 			for l in file("../data/%s.txt" %(wj),"r").readlines():
@@ -99,5 +100,19 @@ class main:
 				h.append(d[5])
 				data.append(h)
 			rd["sjwjzd"].append({"section":wj+fileinfo[wj],"data":data})
+	def rd4(self):	#处理数据文件字段表
+		rd["fieldlist"]=[]
+		for l in file("../data/field.txt","r").readlines():
+			d=l.decode("gbk").split("|")
+			h=[]
+			h.append(d[0])
+			h.append(d[1])
+			if d[2]=="N":
+				h.append("%s%s.%s" %(d[2],d[3],d[4]))
+			else:
+				h.append("%s%s" %(d[2],d[3]))
+			h.append(d[5])
+			h.append(d[6])
+			rd["fieldlist"].append(h)
 
 main()
