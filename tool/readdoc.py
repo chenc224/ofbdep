@@ -283,6 +283,14 @@ class main:
 					f.write(srow+"\n")
 					srow=""
 					row=[]
+	def getinfo101(self):	#返回代码
+		f=open("../doc/returncode.txt","w")
+		for j in range(1,len(self.t.rows)):
+			r=self.t.rows[j]
+			srow=self.fmt(r.cells[0].text)+"|"+self.fmt(r.cells[1].text)+"|"+self.fmt(r.cells[2].text)
+			print(srow)
+			f.write(srow+"\n")
+		f.close()
 	def gettableinfo(self,filename):	#取表数据，用于获取交易对应的字段表
 		srow=""
 		f=open("../doc/%s" %(filename),"w")
