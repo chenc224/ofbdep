@@ -673,7 +673,7 @@ ETF基金专用的赎回业务类型。ETF基金赎回需要经过两次确认，第一次确认份额，第二次再
 \section{数据文件字段表}
 
 \begin{longtabu}{|l|l|l|X[2]|X[3]|}
-\caption{ {{ ttitle }} } \\ \hline
+\caption{ 字段数据字典 } \\ \hline
 ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endfirsthead \hline
 ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endhead \hline
 {% for s in fieldlist %}
@@ -682,6 +682,15 @@ ID & 字段名 & 类型 & 描述 & 备注\\ \hline \endhead \hline
 \end{longtabu}
 
 \section{交易返回码}
+注意：如果找不到合适的返回代码，统一填写"9999"即其它错误。
+\begin{longtabu}{|l|X|X|}
+\caption{ 交易返回码数据字典 } \\ \hline
+返回代码 & 含义 & 备注\\ \hline \endfirsthead \hline
+返回代码 & 含义 & 备注\\ \hline \endhead \hline
+{% for s in returncode %}
+{{ s[0] }} & {{ s[1] }} & {{ s[2] }} \\ \hline
+{% endfor %}
+\end{longtabu}
 
 
 \end{document}

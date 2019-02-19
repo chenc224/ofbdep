@@ -49,7 +49,6 @@ class main:
 			rd["st"+yw]=[]
 			for l in file("../data/st%s.txt" %(yw),"r").readlines():
 				d=l.decode("gbk").split("|")
-				print(yw,d)
 				f=self.field[d[0]]
 				h=[]
 				if d[2][0]=="Y":
@@ -114,5 +113,10 @@ class main:
 			h.append(d[5])
 			h.append(d[6])
 			rd["fieldlist"].append(h)
+	def rd5(self):	#处理返回码数据字典
+		rd["returncode"]=[]
+		for l in file("../data/returncode.txt","r").readlines():
+			d=l.decode("gbk").split("|")
+			rd["returncode"].append(d)
 
 main()
