@@ -1,0 +1,9 @@
+#include "ofbdep.h"
+
+struct stru_ofbdep_field ofbdep_field[]={
+	{% for s in fieldlist -%}
+	{"{{ s[0] }}",'{{ s[1] }}',{{ s[2] }},{{ s[3] }},"{{ s[4] }}"},
+	{% endfor %}
+};
+
+int ofbdep_field_count={{ ofbdep_field_count }};
