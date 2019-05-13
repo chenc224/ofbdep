@@ -8,7 +8,7 @@ simple:simple.o ofbdep_data.o ofbdep_lib.o
 
 ofbdep_data.c:ofbdep_data.template ../data/*.txt makec.py
 	./makec.py
-	iconv -f utf8 -t gbk -o ofbdep_data.c ofbdep_data.c
+#	iconv -f utf8 -t gbk -o ofbdep_data.c ofbdep_data.c
 
 %.o:%.c *.h
 	g++ -c -g -Wall -Werror $<

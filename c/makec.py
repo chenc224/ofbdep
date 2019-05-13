@@ -31,7 +31,7 @@ class main:
 		t=open("ofbdep_data.template","r").read().decode("gbk")
 		tmpl=jinja2.Template(t)
 		cf=file("ofbdep_data.c","w")
-		cf.write(tmpl.render(rd).encode("utf8"))
+		cf.write(tmpl.render(rd).encode("gbk"))
 		cf.close()
 	def rd1(self):	#处理基金业务类型表
 		rd["servicetype"]=[]
@@ -119,5 +119,25 @@ class main:
 		for l in file("../data/returncode.txt","r").readlines():
 			d=l.decode("gbk").split("|")
 			rd["returncode"].append(d)
-
+	def rd6(self):	#
+		rd["datafile_field"]=[]
+		filelist=[]
+		fileinfo={}
+		for fb in rd["fbindex"]:
+			for df in fb["datafile"]:
+				if df["mark"] not in filelist:
+					filelist.append(df["mark"])
+					fileinfo[df["mark"]]=df["describe"]
+		filelist.sort()
+		for wj in filelist:
+			data=[]
+			if not os.path.isfile("../data/%s.txt" %(wj)):
+				continue
+			js=0
+			for l in file("../data/%s.txt" %(wj),"r").readlines():
+				d=l.decode("gbk").split("|")
+				data.append(d[0])
+				js=js+1
+			rd["datafile_field"].append({"name":wj,"field":data,"count":js})
+		rd["datafile_field_count"]=len(rd["datafile_field"])
 main()
