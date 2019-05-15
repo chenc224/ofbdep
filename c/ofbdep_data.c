@@ -1,4 +1,9 @@
+#include <stdio.h>
 #include "ofbdep_data.h"
+
+
+int ofbdep_field_count=715;
+int ofbdep_datafile_field_count=26;
 
 struct stru_ofbdep_field ofbdep_field[]={
 	{"",'C',0,0,""},
@@ -719,8 +724,6 @@ struct stru_ofbdep_field ofbdep_field[]={
 	
 };
 
-int ofbdep_field_count=715;
-
 static int df01[]={ 4,5,6,7,8,27,72,85,92,93,98,101,106,107,108,120,121,135,19,20,21,23,28,29,48,49,51,65,69,73,83,87,88,122,124,126,127,128,136,140,164,167,169,170,171,84,142,181,182,183,265,522,524,530,282,286,287,288,289,290,291,292,293,294,295,296,325,334,335,336,337,338,339,340,341,342,343,344,302,60,58,89,90,254, };
 static int df02[]={ 8,32,119,120,121,135,136,84,137,92,93,87,256,27,72,85,98,122,171,29,142,524,254,297,60,58,309, };
 static int df03[]={ 8,67,80,92,93,120,121,132,134,135,136,25,28,29,37,87,90,91,98,150,195,102,89,40,137,191,192,97,52,141,142,152,123,254,34,173,260,261,264,258,24,60,58,280,281,299,147,617,524,297,526,298,269,270,271,530,301,302,303,327,328,329,395,330,345,346,347,348,307,164,275,392,393,394, };
@@ -749,7 +752,7 @@ static int dfR1[]={ 8,92,93,121,87,136,98,258,90,674,675,676,677,679,678,680,126
 static int dfR2[]={ 8,92,32,137,119,309,635,636,637, };
 
 
-struct stru_datafile_field datafile_field[]={
+struct stru_ofbdep_datafile_field ofbdep_datafile_field[]={
 {"01",84,df01},
 {"02",27,df02},
 {"03",74,df03},
@@ -779,9 +782,15 @@ struct stru_datafile_field datafile_field[]={
 
 };
 
-int datafile_field_count=26;
-
-extern struct stru_ofbdep_field ofbdep_field[];	//全部字段数据字典表
-extern int ofbdep_field_count;					//全部字段数据字典表数量
-extern struct stru_datafile_field datafile_field[];//数据文件和字段对应关系
-extern int datafile_field_count;				//数据文件数量
+struct stru_ofbdep_datafilehead ofbdep_datafilehead[]={//数据文件头
+	{"文件标识","OFDCFDAT",8,1,NULL,NULL},
+	{"版本号","21",4,1,NULL,NULL},
+	{"发送机构","",9,0,NULL,NULL},
+	{"接收机构","",9,0,NULL,NULL},
+	{"日期","",8,0,NULL,NULL},
+	{"汇总表号","",3,0,NULL,NULL},
+	{"文件类型","",2,1,NULL,NULL},
+	{"发送者","",8,0,NULL,NULL},
+	{"接收者","",8,0,NULL,NULL},
+	{"字段数","",3,1,NULL,NULL}
+};
