@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include "ofbdep_data.h"
 
+int ofbdep_field_count=715;	//字段数据字典长度
+int ofbdep_datafile_field_count=26;		//数据文件类型数量
 
-int ofbdep_field_count=715;
-int ofbdep_datafile_field_count=26;
+/*
+struct stru_ofbdep_field	{	//字段数据字典表
+	char name[50],type;		//字段名，类型（C、A、N）
+	int size,decpos;		//大小，小数位置
+	char desc[100];			//描述
+};
+*/
 
 struct stru_ofbdep_field ofbdep_field[]={
 	{"",'C',0,0,""},
@@ -752,6 +759,14 @@ static int dfR1[]={ 8,92,93,121,87,136,98,258,90,674,675,676,677,679,678,680,126
 static int dfR2[]={ 8,92,32,137,119,309,635,636,637, };
 
 
+/*
+struct stru_ofbdep_datafile_field{//文件和字段的对应关系
+	char filemodel[3];//文件类型
+	int fieldcount;//字段数
+	int *field;
+};
+*/
+
 struct stru_ofbdep_datafile_field ofbdep_datafile_field[]={
 {"01",84,df01},
 {"02",27,df02},
@@ -782,15 +797,23 @@ struct stru_ofbdep_datafile_field ofbdep_datafile_field[]={
 
 };
 
+/*
+struct stru_ofbdep_datafilehead	{//数据文件头
+	char name[30],checkvalue[20];//名称，检查值,类型
+	int size,check;//长度,检查标志
+	char * value;//数据
+};
+*/
+
 struct stru_ofbdep_datafilehead ofbdep_datafilehead[]={//数据文件头
-	{"文件标识","OFDCFDAT",8,1,NULL,NULL},
-	{"版本号","21",4,1,NULL,NULL},
-	{"发送机构","",9,0,NULL,NULL},
-	{"接收机构","",9,0,NULL,NULL},
-	{"日期","",8,0,NULL,NULL},
-	{"汇总表号","",3,0,NULL,NULL},
-	{"文件类型","",2,1,NULL,NULL},
-	{"发送者","",8,0,NULL,NULL},
-	{"接收者","",8,0,NULL,NULL},
-	{"字段数","",3,1,NULL,NULL}
+	{"文件标识","OFDCFDAT",8,1,NULL},
+	{"版本号","21",4,1,NULL},
+	{"发送机构","",9,0,NULL},
+	{"接收机构","",9,0,NULL},
+	{"日期","",8,0,NULL},
+	{"汇总表号","",3,0,NULL},
+	{"文件类型","",2,1,NULL},
+	{"发送者","",8,0,NULL},
+	{"接收者","",8,0,NULL},
+	{"字段数","",3,1,NULL}
 };

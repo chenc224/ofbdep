@@ -13,8 +13,7 @@ struct stru_ofbdep_datafile_field{//文件和字段的对应关系
 struct stru_ofbdep_datafilehead	{//数据文件头
 	char name[30],checkvalue[20];//名称，检查值,类型
 	int size,check;//长度,检查标志
-	char * sv;//指向字符串值
-	int * iv;//指向整型值
+	char * value;//数据
 };
 
 extern struct stru_ofbdep_field ofbdep_field[];	//全部字段数据字典表
