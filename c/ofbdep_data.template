@@ -47,7 +47,7 @@ struct stru_ofbdep_filehead	{//用于处理文件头
 
 struct stru_ofbdep_filehead ofbdep_datafilehead[]={//数据文件头
 	{"文件标识","OFDCFDAT",8,1,NULL},
-	{"版本号","21",4,1,NULL},
+	{"版本号","21",4,0,NULL},
 	{"发送机构","",9,0,NULL},
 	{"接收机构","",9,0,NULL},
 	{"日期","",8,0,NULL},
@@ -55,12 +55,12 @@ struct stru_ofbdep_filehead ofbdep_datafilehead[]={//数据文件头
 	{"文件类型","",2,1,NULL},
 	{"发送者","",8,0,NULL},
 	{"接收者","",8,0,NULL},
-	{"字段数","",3,1,NULL}
+	{"字段数","",3,0,NULL}
 };
 
 struct stru_ofbdep_filehead ofbdep_idxfilehead[]={//索引文件头
 	{"文件标识","OFDCFIDX",8,1,NULL},
-	{"版本号","21",4,1,NULL},
+	{"版本号","21",4,0,NULL},
 	{"发送机构","",9,0,NULL},
 	{"接收机构","",9,0,NULL},
 	{"日期","",8,0,NULL},
