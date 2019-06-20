@@ -263,7 +263,7 @@ class main:
 					row.append(num)
 					srow=srow+num+"|"
 					if row[2]=="N":
-						ext=["零","一","二","三","四","五","六","七","八","九"]
+						ext=["零","一","两","三","四","五","六","七","八","九"]
 						for i in range(1,len(ext)):
 							if t.find(ext[i])>0:
 								row.append("%d" %(i))
@@ -280,7 +280,8 @@ class main:
 					srow=srow+t+"|"
 				if len(row)==7:
 					print(srow)
-					f.write(srow+"\n")
+					if srow[:2]!="ID":
+						f.write(srow+"\n")
 					srow=""
 					row=[]
 	def getinfo101(self):	#返回代码

@@ -1,26 +1,25 @@
-ID|字段名|类型|||描述|备注|
-1|AcctManFee|N|16|0|基金账户管理费||
-2|InstAppSubsAmnt|N|16|0|法人追加认购金额||
-3|InstAppSubsVol|N|16|0|法人追加认购份数||
+1|AcctManFee|N|16|2|基金账户管理费||
+2|InstAppSubsAmnt|N|16|2|法人追加认购金额||
+3|InstAppSubsVol|N|16|2|法人追加认购份数||
 4|Address|C|120||通讯地址||
 5|InstReprIDCode|C|30||法人代表身份证件代码||
 6|InstReprIDType|C|1||法人代表证件类型||
 7|InstReprName|C|20||法人代表姓名||
 8|AppSheetSerialNo|A|24||申请单编号|同一销售机构不能重复|
-9|TotalSubsAmnt|N|16|0|申购总金额||
+9|TotalSubsAmnt|N|16|2|申购总金额||
 10|TotalAccptdSubsVol|N|10|0|成功申购总笔数|申请总笔数|
-11|TotalSubsCharge|N|16|0|申购手续费总金额||
-12|TotalSubsVol|N|16|0|申购总份数||
-13|AvailableVol|N|16|0|持有人可用基金份数||
+11|TotalSubsCharge|N|16|2|申购手续费总金额||
+12|TotalSubsVol|N|16|2|申购总份数||
+13|AvailableVol|N|16|2|持有人可用基金份数||
 14|IssueType|C|1||基金发行方式|1-不限量发行，2-限额发行,3-比例配售|
-15|AmntReinbursed|N|16|0|退回金额||
-16|BackendLoad|N|16|0|每笔交易后端收费||
-17|AcctBalanceInIndividualDistributor|N|16|0|持有人在单个销售机构的基金份数||
-18|TotalVolOfDistributorInTA|N|16|0|基金总份数（含冻结）||
+15|AmntReinbursed|N|16|2|退回金额||
+16|BackendLoad|N|16|2|每笔交易后端收费||
+17|AcctBalanceInIndividualDistributor|N|16|2|持有人在单个销售机构的基金份数||
+18|TotalVolOfDistributorInTA|N|16|2|基金总份数（含冻结）||
 19|AcctNoOfFMInClearingAgency|C|28||基金管理人在资金清算机构的交收账号||
 20|AcctNameOfFMInClearingAgency|C|60||基金管理人在资金清算机构的交收账户名||
 21|ClearingAgencyCode|A|9||基金资金清算机构代码||
-22|BasisforCalculatingDividend|N|16|0|红利/红利再投资基数|登记日基金持有人的基金份数|
+22|BasisforCalculatingDividend|N|16|2|红利/红利再投资基数|登记日基金持有人的基金份数|
 23|InvestorsBirthday|A|8||投资人出生日期|格式为：YYYYMMDD|
 24|DefDividendMethod|A|1||默认分红方式|0-红利转投，1-现金分红|
 25|DiscountRateOfCommission|N|5|4|销售佣金折扣率|销售人申报的折扣率|
@@ -32,49 +31,49 @@ ID|字段名|类型|||描述|备注|
 32|TransactionCfmDate|A|8||交易确认日期|格式为：YYYYMMDD|
 33|AnnContent|C|||公告内容||
 34|CodeOfTargetFund|A|6||转换时的目标基金代码||
-35|MinAmountByInst|N|16|0|法人首次认购最低金额||
-36|MinVolByInst|N|16|0|法人首次认购最低份数||
+35|MinAmountByInst|N|16|2|法人首次认购最低金额||
+36|MinVolByInst|N|16|2|法人首次认购最低份数||
 37|CurrencyType|A|3||结算币种|具体编码依GB/T 12406-2008|
 38|CustodianCode|C|3||托管人代码||
-39|AmountOfPeriodicSubs|N|16|0|定时定额申购的金额||
+39|AmountOfPeriodicSubs|N|16|2|定时定额申购的金额||
 40|DateOfPeriodicSubs|A|8||定时定额申购日期|格式为：YYYYMMDD|
-41|VolOfDividendforReinvestment|N|16|0|基金账户红利再投资基金份数||
+41|VolOfDividendforReinvestment|N|16|2|基金账户红利再投资基金份数||
 42|DividentDate|A|8||分红日/发放日||
-43|DividendAmount|N|16|0|基金账户红利资金||
-44|TotalDividendAmount|N|16|0|基金红利总额||
+43|DividendAmount|N|16|2|基金账户红利资金||
+44|TotalDividendAmount|N|16|2|基金红利总额||
 45|DividendOrShare|A|1||红利/红利再投资标志,|0-红利再投资，1-红利|
 46|XRDate|A|8||除权日||
 47|DownLoaddate|A|8||交易数据下传日期|指发送日期|
 48|EducationLevel|C|3||投资人学历|01-研究生02-大学本科03- 大学专科04-中专或技校05-技工学校06-高中07-初中08-小学09-文盲或半文盲|
 49|EmailAddress|C|40||投资人E-MAIL地址||
-50|TotalDividendIndeed|N|16|0|基金实发红利总金额||
+50|TotalDividendIndeed|N|16|2|基金实发红利总金额||
 51|FaxNo|C|24||投资人传真号码||
-52|Charge|N|10|0|手续费||
-53|AgencyFee|N|10|0|代理费||
+52|Charge|N|10|2|手续费||
+53|AgencyFee|N|10|2|代理费||
 54|ChargeRate|N|6|4|手续费率||
-55|TotalTransFee|N|10|0|交易确认费用合计||
-56|TotalFeeForDividend|N|10|0|分红费用合计||
+55|TotalTransFee|N|10|2|交易确认费用合计||
+56|TotalFeeForDividend|N|10|2|分红费用合计||
 57|AnnouncementNo|C|13||公告文件号|基金管理公司编码：(NNN) +YYYYMMDD+序号(NN)|
 58|FreezingDeadline|A|8||冻结截止日期|格式为：YYYYMMDD|
-59|TotalFrozenVol|N|16|0|基金冻结总份数||
+59|TotalFrozenVol|N|16|2|基金冻结总份数||
 60|FrozenCause|A|1||冻结原因|0-司法冻结，1-柜台冻结,2-质押冻结，3-质押、司法双重冻结 4-柜台、司法双重冻结|
-61|FrontendFee|N|16|0|每笔交易前端收费||
-62|ConfirmedVol|N|16|0|基金账户交易确认份数||
+61|FrontendFee|N|16|2|每笔交易前端收费||
+62|ConfirmedVol|N|16|2|基金账户交易确认份数||
 63|FundName|C|40||基金名称||
-64|ConfirmedAmount|N|16|0|每笔交易确认金额||
+64|ConfirmedAmount|N|16|2|每笔交易确认金额||
 65|VocationCode|C|3||投资人职业代码|01-党政机关、事业单位 02-企业单位03-自由业主04- 学生05-军人06-其他|
-66|TotalFundVol|N|16|0|基金总份数||
+66|TotalFundVol|N|16|2|基金总份数||
 67|FundCode|C|6||基金代码||
 68|FundStatus|C|1||基金状态|0-可申购赎回，1-发行,4-停止申购赎回,5-停止申购，6-停止赎回,8-基金终止，9-基金封闭|
 69|HomeTelNo|C|22||投资人住址电话||
-70|MaxRedemptionVol|N|16|0|基金最高赎回份数||
-71|MinAccountBalance|N|16|0|基金最低持有份数||
+70|MaxRedemptionVol|N|16|2|基金最高赎回份数||
+71|MinAccountBalance|N|16|2|基金最低持有份数||
 72|CertificateNo|C|30||投资人证件号码||
 73|AnnualIncome|N|8|0|投资人年收入||
 74|AnnouncementDate|A|8||公告日期|格式为：YYYYMMDD|
 75|AnnouncementType|A|1||公告类别|0-常规，1-异常|
-76|Interest|N|10|0|基金账户利息金额||
-77|BackAmountByInvalid|N|16|0|因为无效而划回投资人的资金||
+76|Interest|N|10|2|基金账户利息金额||
+77|BackAmountByInvalid|N|16|2|因为无效而划回投资人的资金||
 78|IPOStartDate|A|8||基金募集开始日期|格式为：YYYYMMDD|
 79|IPOEndDate|A|8||基金募集结束日期|格式为：YYYYMMDD|
 80|LargeRedemptionFlag|A|1||巨额赎回处理标志|0-取消，1-顺延|
@@ -91,74 +90,74 @@ ID|字段名|类型|||描述|备注|
 91|OriginalSubsDate|A|8||原申购日期|格式为：YYYYMMDD|
 92|TransactionDate|A|8||交易发生日期|格式为：YYYYMMDD|
 93|TransactionTime|A|6||交易发生时间|格式为：HHMMSS|
-94|OtherFee1|N|10|0|其他费用1||
-95|OtherFee2|N|16|0|其他费用2||
-96|OtherFee3|N|16|0|其他费用3||
+94|OtherFee1|N|10|2|其他费用1||
+95|OtherFee2|N|16|2|其他费用2||
+96|OtherFee3|N|16|2|其他费用3||
 97|TargetDistributorCode|C|9||对方销售人代码||
 98|IndividualOrInstitution|A|1||个人/机构标志|0-机构，1-个人，2-产品（在参数文件中表示“全部”）|
-99|IndiAppSubsVol|N|16|0|个人追加认购份数||
-100|IndiAppSubsAmount|N|16|0|个人追加认购金额||
+99|IndiAppSubsVol|N|16|2|个人追加认购份数||
+100|IndiAppSubsAmount|N|16|2|个人追加认购金额||
 101|PostCode|A|6||投资人邮政编码||
 102|RedemptionDateInAdvance|A|8||预约赎回日期|格式为：YYYYMMDD|
 103|IPOPrice|N|7|4|发行价格||
-104|MinSubsVolByIndi|N|16|0|个人首次认购最低份数||
-105|MinSubsAmountByIndi|N|16|0|个人首次认购最低金额||
+104|MinSubsVolByIndi|N|16|2|个人首次认购最低份数||
+105|MinSubsAmountByIndi|N|16|2|个人首次认购最低金额||
 106|TransactorCertNo|C|30||经办人证件号码||
 107|TransactorCertType|C|1||经办人证件类型,|0-身份证，1-护照,2-军官证，3-士兵证,4-港澳居民来往内地通行证，5-户口本,6-外国护照，7-其它,8-文职证，9-警官证,A-台胞证,B-外国人永久居留身份证|
 108|TransactorName|C|20||经办人姓名||
-109|TotalRedemptionAmount|N|16|0|基金赎回总金额||
+109|TotalRedemptionAmount|N|16|2|基金赎回总金额||
 110|TotalTransactionOfSuccessfulRedemption|N|10|0|成功赎回总笔数||
-111|TotalFeeOfRedemption|N|16|0|赎回手续费总金额||
-112|VolOnRegistraionDate|N|16|0|权益登记日基金账户份数||
+111|TotalFeeOfRedemption|N|16|2|赎回手续费总金额||
+112|VolOnRegistraionDate|N|16|2|权益登记日基金账户份数||
 113|RegistrationDate|A|8||权益登记日期|格式为：YYYYMMDD|
 114|RegistrarCode|C|2||注册登记人代码||
-115|RegistrationFee|N|16|0|注册登记费||
-116|TotalReinvestmentDividend|N|16|0|红利自动再投资总金额||
-117|BackAmountByExcess|N|16|0|因为剩余而划回投资人的资金||
-118|TotalRedemptionVol|N|16|0|赎回总份数||
+115|RegistrationFee|N|16|2|注册登记费||
+116|TotalReinvestmentDividend|N|16|2|红利自动再投资总金额||
+117|BackAmountByExcess|N|16|2|因为剩余而划回投资人的资金||
+118|TotalRedemptionVol|N|16|2|赎回总份数||
 119|ReturnCode|A|4||交易处理返回代码|取值见附录B|
 120|TransactionAccountID|A|17||投资人基金交易账号|投资人在销售机构内开设的用于交易的账号|
 121|DistributorCode|C|9||销售人代码||
 122|AccountAbbr|C|12||投资人户名简称||
-123|DividendRatio|N|16|0|红利比例|(金额/分红总额)|
+123|DividendRatio|N|16|2|红利比例|(金额/分红总额)|
 124|ConfidentialDocumentCode|C|8||密函编号||
 125|DocumentSendDate|A|8||文件发送日期|格式为：YYYYMMDD|
 126|Sex|A|1||投资人性别|1-男，2-女|
 127|SHSecuritiesAccountID|C|10||上交所证券账号||
 128|SZSecuritiesAccountID|C|10||深交所证券账号||
-129|FundSize|N|16|0|基金规模||
+129|FundSize|N|16|2|基金规模||
 130|FundSponsor|A|3||基金发起人||
 131|AnnouncementTitle|C|100||公告标题||
-132|ApplicationVol|N|16|0|申请基金份数||
+132|ApplicationVol|N|16|2|申请基金份数||
 133|TradingPrice|N|7|4|交易价格|单位基金净值+各种费用|
-134|ApplicationAmount|N|16|0|申请金额||
+134|ApplicationAmount|N|16|2|申请金额||
 135|BusinessCode|A|3||业务代码|编码见表4|
 136|TAAccountID|C|12||投资人基金账号||
 137|TASerialNO|A|20||TA确认交易流水号|TA对每笔确认的唯一标识，同一日不能重复，,与交易确认日期TransactionCfmDate一起组成TA中一笔确认的唯一键|
-138|StampDuty|N|16|0|印花税||
-139|Tax|N|16|0|税金||
+138|StampDuty|N|16|2|印花税||
+139|Tax|N|16|2|税金||
 140|TelNo|C|22||投资人电话号码||
 141|TargetBranchCode|C|9||对方网点号|转销售人/机构、非交易过户时使用|
 142|TargetTransactionAccountID|A|17||对方销售人处投资人基金交易账号|非交易过户时使用|
 143|AggregationOfTransactionByBusinessType|N|8|0|每种业务笔数汇总||
 144|AggregationDate|A|8||汇总日期|格式为：YYYYMMDD|
-145|TotalVol|N|16|0|基金份数汇总||
-146|TotalAmount|N|16|0|基金金额汇总||
+145|TotalVol|N|16|2|基金份数汇总||
+146|TotalAmount|N|16|2|基金金额汇总||
 147|TargetTAAccountID|C|12||对方基金账号|转销售人、非交易过户时|
-148|TrailCommission|N|16|0|尾随佣金||
+148|TrailCommission|N|16|2|尾随佣金||
 149|UpdateDate|A|8||基金净值日期|格式为：YYYYMMDD|
 150|ValidPeriod|N|2|0|交易申请有效天数||
 151|FaceValue|N|7|4|基金面值||
 152|TargetRegionCode|A|4||对方所在地区编号||
-153|TotalFailingVol|N|16|0|失败份数汇总||
-154|TotalSuccessfulVol|N|16|0|成功份数汇总||
-155|DividendPerUnit|N|16|0|单位基金分红金额（含税）||
-156|InterestTax|N|16|0|利息税||
-157|FundVolBalance|N|16|0|基金份数余额||
+153|TotalFailingVol|N|16|2|失败份数汇总||
+154|TotalSuccessfulVol|N|16|2|成功份数汇总||
+155|DividendPerUnit|N|16|2|单位基金分红金额（含税）||
+156|InterestTax|N|16|2|利息税||
+157|FundVolBalance|N|16|2|基金份数余额||
 158|BeginAllotNo|N|12|0|配号开始号||
 159|EndAllotNo|N|12|0|配号结束号||
 160|TotalAllotNo|N|12|0|配号总数||
-161|CfmVolOfTargetFund|N|16|0|目标基金的确认份数||
+161|CfmVolOfTargetFund|N|16|2|目标基金的确认份数||
 162|TargetNAV|N|7|4|目标基金的单位净值||
 163|TargetFundPrice|N|7|4|目标基金的价格||
 164|TradingMethod|C|8||使用的交易手段|共8个字符，每个字符代表一种交易手段，其含义为：,第1位：CALLCENTER,第2位：INTERNET,第3位：自助终端,第4位：柜台,第5~8位：保留,每个字符取1表示使用此种手段，取0表示不使用|
@@ -168,10 +167,10 @@ ID|字段名|类型|||描述|备注|
 169|DeliverType|C|1||对账单寄送选择||
 170|TransactorIDType|C|1||经办人识别方式|1-书面委托，2-印鉴,3-密码，4-证件|
 171|AccountCardID|C|8||基金账户卡的凭证号||
-172|TotalFrontendFee|N|16|0|交易前端收费总额||
-173|TotalBackendLoad|N|16|0|交易后端收费总额||
-174|TotalFailingAmount|N|16|0|失败金额汇总||
-175|TotalSuccessfulAmount|N|16|0|成功金额汇总||
+172|TotalFrontendFee|N|16|2|交易前端收费总额||
+173|TotalBackendLoad|N|16|2|交易后端收费总额||
+174|TotalFailingAmount|N|16|2|失败金额汇总||
+175|TotalSuccessfulAmount|N|16|2|成功金额汇总||
 176|TransferDirection|A|1||转入/转出标识|0-转出，1-转入|
 177|BusinessFinishFlag|C|1||业务过程完全结束标识|0-中间过程,1-业务过程结束|
 178|TotalFailingDealingNum|N|6|0|失败交易笔数||
@@ -180,93 +179,93 @@ ID|字段名|类型|||描述|备注|
 181|AcctNameOfInvestorInClearingAgency|C|60||投资人收款银行账户户名||
 182|AcctNoOfInvestorInClearingAgency|C|28||投资人收款银行账户账号||
 183|ClearingAgency|A|9||投资人收款银行账户开户行||
-184|UnFrozenBalance|N|16|0|解冻红利金额|账户冻结期间产生的红利|
+184|UnFrozenBalance|N|16|2|解冻红利金额|账户冻结期间产生的红利|
 185|BusinessOrganiger|C|3||业务发起人代码|　|
 186|AccountType|C|1||账户类型|0-普通账户，1-机构散户|
-187|FrozenBalance|N|16|0|冻结金额||
-188|FrozenShares|N|16|0|冻结红利再投资份数|需冻结的红利再投资份数|
-189|TotalFare|N|16|0|交易费用汇总|　|
+187|FrozenBalance|N|16|2|冻结金额||
+188|FrozenShares|N|16|2|冻结红利再投资份数|需冻结的红利再投资份数|
+189|TotalFare|N|16|2|交易费用汇总|　|
 190|VastRedeemFlag|C|1||巨额赎回标志|0：非巨额；1：巨额|
 191|TermOfPeriodicSubs|N|5|0|定时定额申购期限||
 192|FutureBuyDate|A|8||指定申购日期|格式为：YYYYMMDD|
 193|RateFee|N|9|8|费率|分段收费考虑|
-194|MinFee|N|10|0|最少收费||
+194|MinFee|N|10|2|最少收费||
 195|DaysRedemptionInAdvance|N|5|0|预约赎回工作日天数||
-198|MaxSubsVolByIndi|N|16|0|个人最高认购份数||
-199|MaxSubsAmountByIndi|N|16|0|个人最高认购金额||
-200|MaxSubsVolByInst|N|16|0|法人最高认购份数||
-201|MaxSubsAmountByInst|N|16|0|法人最高认购金额||
-202|UnitSubsVolByIndi|N|16|0|个人认购份数单位||
-203|UnitSubsAmountByIndi|N|16|0|个人认购金额单位||
-204|UnitSubsVolByInst|N|16|0|法人认购份数单位||
-205|UnitSubsAmountByInst|N|16|0|法人认购金额单位||
-206|MinBidsAmountByIndi|N|16|0|个人首次申购最低金额||
-207|MinBidsAmountByInst|N|16|0|法人首次申购最低金额||
-208|MinAppBidsAmountByIndi|N|16|0|个人追加申购最低金额||
-209|MinAppBidsAmountByInst|N|16|0|法人追加申购最低金额||
-210|MinRedemptionVol|N|16|0|基金最少赎回份数||
-211|MinInterconvertVol|N|16|0|最低基金转换份数||
+198|MaxSubsVolByIndi|N|16|2|个人最高认购份数||
+199|MaxSubsAmountByIndi|N|16|2|个人最高认购金额||
+200|MaxSubsVolByInst|N|16|2|法人最高认购份数||
+201|MaxSubsAmountByInst|N|16|2|法人最高认购金额||
+202|UnitSubsVolByIndi|N|16|2|个人认购份数单位||
+203|UnitSubsAmountByIndi|N|16|2|个人认购金额单位||
+204|UnitSubsVolByInst|N|16|2|法人认购份数单位||
+205|UnitSubsAmountByInst|N|16|2|法人认购金额单位||
+206|MinBidsAmountByIndi|N|16|2|个人首次申购最低金额||
+207|MinBidsAmountByInst|N|16|2|法人首次申购最低金额||
+208|MinAppBidsAmountByIndi|N|16|2|个人追加申购最低金额||
+209|MinAppBidsAmountByInst|N|16|2|法人追加申购最低金额||
+210|MinRedemptionVol|N|16|2|基金最少赎回份数||
+211|MinInterconvertVol|N|16|2|最低基金转换份数||
 212|IssueTypeByIndi|C|1||个人发行方式|1-比例发行，2-摇号,3-先来先买|
 213|IssueTypeByInst|C|1||机构发行方式|1-比例发行，2-摇号,3-先来先买|
 214|SubsType|C|1||认购方式|0-金额认购，1-份数认购|
 215|CollectFeeType|C|1||交易费收取方式|0-价内费，1-价外费|
 216|NextTradeDate|A|8||下一开放日||
-217|SalerNetReceivableAmount|N|16|0|销售人净收结算金额|　|
-218|SalerNetPayableAmount|N|16|0|销售人净付结算金额|　|
-219|SalerTotalFee|N|16|0|销售人收取费用总额|　|
-220|SalerBuyFee|N|16|0|销售人收取申购费用|　|
-221|SalerBidFee|N|16|0|销售人收取赎回费用|　|
-222|FundTotalFee|N|16|0|赎回费用总额（扣除保留在基金资产部分）|　|
-223|RaiseTotalAmount|N|16|0|认购资金总额|　|
-224|AccumulativeTotalRaiseAmount|N|16|0|累计认购资金总额|　|
-225|RaiseInterest|N|16|0|认购期间利息|　|
-226|SalerRaiseFee|N|16|0|销售人认购费|　|
-227|ConversionInAmount|N|16|0|转入款|　|
-228|ConvertingToAmount|N|16|0|转出款|　|
-229|SalerExchangeFee|N|16|0|销售人转换费|　|
-230|BidTax|N|16|0|申购印花税|　|
-231|RedemptionTax|N|16|0|赎回印花税|　|
-232|IndividualCapitalGainTax|N|16|0|分红个人利得所得税|　|
-233|InstituteCapitalGainTax|N|16|0|分红机构利得所得税|　|
-234|IndividualIncomeTax|N|16|0|分红个人增值所得税|　|
-235|InstituteIncomeTax|N|16|0|分红机构增值所得税|　|
-236|SalerReinvestmentFee|N|16|0|销售人再投资费|　|
-237|SubFeeRetTA|N|16|0|申购归注册登记人所得费用|包括注册登记人的费用|
-238|RedemFeeRetTA|N|16|0|赎回归注册登记人所得费用|包括注册登记人的费用|
-239|TotalTransInAmount|N|16|0|基金转换入总金额|　|
-240|TotalFeeOfTransInAmount|N|16|0|基金转换入手续费总金额|　|
-241|TotalTransInVol|N|16|0|基金转换入总份数|　|
-242|TotalTransOutAmount|N|16|0|基金转换出总金额|　|
-243|TotalFeeOfTransOutAmount|N|16|0|基金转换出手续费总金额|　|
-244|TotalTransOutVol|N|16|0|基金转换出总份数|　|
+217|SalerNetReceivableAmount|N|16|2|销售人净收结算金额|　|
+218|SalerNetPayableAmount|N|16|2|销售人净付结算金额|　|
+219|SalerTotalFee|N|16|2|销售人收取费用总额|　|
+220|SalerBuyFee|N|16|2|销售人收取申购费用|　|
+221|SalerBidFee|N|16|2|销售人收取赎回费用|　|
+222|FundTotalFee|N|16|2|赎回费用总额（扣除保留在基金资产部分）|　|
+223|RaiseTotalAmount|N|16|2|认购资金总额|　|
+224|AccumulativeTotalRaiseAmount|N|16|2|累计认购资金总额|　|
+225|RaiseInterest|N|16|2|认购期间利息|　|
+226|SalerRaiseFee|N|16|2|销售人认购费|　|
+227|ConversionInAmount|N|16|2|转入款|　|
+228|ConvertingToAmount|N|16|2|转出款|　|
+229|SalerExchangeFee|N|16|2|销售人转换费|　|
+230|BidTax|N|16|2|申购印花税|　|
+231|RedemptionTax|N|16|2|赎回印花税|　|
+232|IndividualCapitalGainTax|N|16|2|分红个人利得所得税|　|
+233|InstituteCapitalGainTax|N|16|2|分红机构利得所得税|　|
+234|IndividualIncomeTax|N|16|2|分红个人增值所得税|　|
+235|InstituteIncomeTax|N|16|2|分红机构增值所得税|　|
+236|SalerReinvestmentFee|N|16|2|销售人再投资费|　|
+237|SubFeeRetTA|N|16|2|申购归注册登记人所得费用|包括注册登记人的费用|
+238|RedemFeeRetTA|N|16|2|赎回归注册登记人所得费用|包括注册登记人的费用|
+239|TotalTransInAmount|N|16|2|基金转换入总金额|　|
+240|TotalFeeOfTransInAmount|N|16|2|基金转换入手续费总金额|　|
+241|TotalTransInVol|N|16|2|基金转换入总份数|　|
+242|TotalTransOutAmount|N|16|2|基金转换出总金额|　|
+243|TotalFeeOfTransOutAmount|N|16|2|基金转换出手续费总金额|　|
+244|TotalTransOutVol|N|16|2|基金转换出总份数|　|
 245|BidTrade|N|13|0|成功申购总户数|　|
 246|RedeemTrade|N|13|0|成功赎回总户数|　|
-247|FreezeTotal|N|16|0|冻结总份数|　|
+247|FreezeTotal|N|16|2|冻结总份数|　|
 248|ManagerCode|A|3||管理人代码||
-249|NetBidTotalAmount|N|16|0|申购成功资金总额（不含费用，不含税）||
-250|NetRedeemTotalAmount|N|16|0|赎回成功资金总额（不含费用，不含税）||
+249|NetBidTotalAmount|N|16|2|申购成功资金总额（不含费用，不含税）||
+250|NetRedeemTotalAmount|N|16|2|赎回成功资金总额（不含费用，不含税）||
 251|CreditDebit|N|1|0|借贷方向|0-借方 1-贷方|
-252|RedemptionFee|N|16|0|赎回费||
-253|NetSettlement|N|16|0|资金清算净额|全额交收可以用作实际清算额|
+252|RedemptionFee|N|16|2|赎回费||
+253|NetSettlement|N|16|2|资金清算净额|全额交收可以用作实际清算额|
 254|Specification|C|60||摘要/说明||
-255|TransferFee|N|10|0|过户费||
+255|TransferFee|N|10|2|过户费||
 256|FromTAFlag|A|1||是否注册登记人发起业务标志|0-由销售人发起，,1-由注册登记人发起|
 257|FrozenMethod|A|1||冻结方式|0-原份数冻结，,1-原份数+滋息冻结|
 258|OriginalAppDate|A|8||原申请日期|格式为：YYYYMMDD|
-259|TotalBackendLoadVol|N|16|0|交易后端收费总份数||
+259|TotalBackendLoadVol|N|16|2|交易后端收费总份数||
 260|ShareClass|A|1||收费方式|0-前收费，1-后收费,2-前后收费共用（基金代码）|
 261|OriginalCfmDate|A|8||TA的原确认日期||
 262|RedemptionInAdvanceFlag|A|1||预约赎回标志|0-非预约赎回，1-预约赎回|
 263|RedemptionReason|A|1||强行赎回原因|0-小于最低持有数，,1-司法执行，2-政策原因,3-全份额快速过户后强制结转收益并强赎|
 264|DetailFlag|A|1||明细标志|0-非明细，1-明细|
 265|DeliverWay|C|8||对账单寄送方式|共8个字符，每个字符代表一种交易手段，其含义为：,第1位：邮寄，,第2位：传真，,第3位：E-mail，,第4位：短消息，,第5~8位：保留。,每位字符取1表示采用此种手段，取0表示不使用|
-266|VolumeByInterest|N|16|0|利息产生的基金份数||
-267|ValueLine|N|7|0|产品价值线数值||
+266|VolumeByInterest|N|16|2|利息产生的基金份数||
+267|ValueLine|N|7|2|产品价值线数值||
 268|AccountStatus|A|1||账户状态|0-正常，1-冻结，2-挂失|
 269|BeginDateOfPeriodicSubs|A|8||定时定额申购起始日期|格式为：YYYYMMDD|
 270|EndDateOfPeriodicSubs|A|8||定时定额申购终止日期|格式为：YYYYMMDD|
 271|SendDayOfPeriodicSubs|N|2|0|定时定额申购每周期发送日|指每周期的第几天。如果遇非交易日，则顺延到下一交易日。|
-272|TotalVolumeofReinvestmentDividend|N|16|0|红利再投资份额总额||
+272|TotalVolumeofReinvestmentDividend|N|16|2|红利再投资份额总额||
 273|AccumulativeNAV|N|7|4|累计基金单位净值||
 274|ShareRegisterDate|A|8||份额注册日期||
 275|LargeBuyFlag|A|1||巨额购买处理标志|0-取消，1-顺延|
@@ -277,7 +276,7 @@ ID|字段名|类型|||描述|备注|
 280|VarietyCodeOfPeriodicSubs|C|5||定时定额品种代码||
 281|SerialNoOfPeriodicSubs|C|5||定时定额申购序号||
 282|CorpName|C|40||工作单位名称||
-283|RefundAmount|N|16|0|退款金额||
+283|RefundAmount|N|16|2|退款金额||
 284|SecuritiesAccountID|C|10||证券账号||
 285|SalePercent|N|8|5|配售比例||
 286|CertValidDate|A|8||证件有效日期||
@@ -289,24 +288,24 @@ ID|字段名|类型|||描述|备注|
 292|ActualController|C|80||实际控制人||
 293|MarriageStatus|C|1||婚姻状况|0-未婚  1-已婚|
 294|FamilyNum|N|2|0|家庭人口数||
-295|Penates|N|16|0|家庭资产||
+295|Penates|N|16|2|家庭资产||
 296|MediaHobby|C|1||媒体偏好|0-网络  1-广播 2-电视 3-报刊 4-其它|
 297|CustomerNo|C|12||TA客户编号||
 298|RationProtocolNo|C|20||定期定额协议号||
 299|RationType|C|1||定期定额种类||
-300|BreachFee|N|16|0|违约金||
+300|BreachFee|N|16|2|违约金||
 301|SalesPromotion|C|3||促销活动代码||
 302|AcceptMethod|C|1||受理方式|0-柜台1-电话2-网上3-自助 4-传真 5-其他|
 303|ForceRedemptionType|C|1||强制赎回类型|0-强制赎回，1-违约赎回，2-到期|
 304|AllowBreachRedempt|C|1||允许违约赎回标志|0-允许，1-不允许|
-305|PunishFee|N|16|0|惩罚性费用||
-306|BreachFeeBackToFund|N|16|0|违约金归基金资产金额||
+305|PunishFee|N|16|2|惩罚性费用||
+306|BreachFeeBackToFund|N|16|2|违约金归基金资产金额||
 307|FutureSubscribeDate|A|8||指定认购日期||
 308|TotalDivident|N|8|5|累积单位分红||
 309|ErrorDetail|C|60||出错详细信息||
 310|FundType|C|2||基金类型|01-股票型02-债券型03-混合型04-货币型|
 311|PointsType|C|1||积分类型|0-基金公司一般积分 1-利添利联名卡积分|
-312|Points|N|15|0|积分值||
+312|Points|N|15|2|积分值||
 313|FundCorpCode|C|8||基金公司代码||
 314|FundServerTel|C|30||基金公司客服电话||
 315|FundInternetAddress|C|40||基金公司网站网址||
@@ -324,7 +323,7 @@ ID|字段名|类型|||描述|备注|
 327|TakeIncomeFlag|C|1||带走收益标志|0-不带走，1-带走|
 328|PurposeOfPeSubs|C|40||定投目的||
 329|FrequencyOfPeSubs|N|5|0|定投频率||
-330|BatchNumOfPeSubs|N|16|0|定投期数||
+330|BatchNumOfPeSubs|N|16|2|定投期数||
 331|FundTypeName|C|30||基金类型名称||
 332|RegistrarName|C|40||注册登记人名称||
 333|FundManagerName|C|40||基金管理人名称||
@@ -332,7 +331,7 @@ ID|字段名|类型|||描述|备注|
 335|EnglishFamliyName|C|20||投资人英文姓||
 336|Vocation|C|4||行业|采用国标GB/T4754-2011|
 337|CorpoProperty|C|2||企业性质|0-国企 1-民营 2-合资,3-其它|
-338|StaffNum|N|16|0|员工人数||
+338|StaffNum|N|16|2|员工人数||
 339|Hobbytype|C|2||兴趣爱好类型||
 340|Province|C|6||省/直辖市|采用国标GB/T 2260-2007中6位数字代码|
 341|City|C|6||市|采用国标GB/T 2260-2007中6位数字代码|
@@ -345,19 +344,19 @@ ID|字段名|类型|||描述|备注|
 348|CombineNum|C|6||组合编号||
 349|AlternationDate|A|8||最后更新日||
 350|TargetDistributorType|C|1||对方销售人类型||
-351|XRValue|N|16|0|单位除权值||
+351|XRValue|N|16|2|单位除权值||
 352|XRValueFlag|C|1||单位除权值正负|0-正  1-负|
 353|XRType|C|1||除权类型|0-分红   1-净值调整|
 354|DividendType|C|1||分红类型|0-普通分红，1-质押基金分红，2-货币基金收益结转，3-保本基金赔付，4-专户到期处理|
 355|SequenceNO|A|20||序号||
 356|OperateDate|A|8||生效日期|YYYYMMDD|
-357|VolLowerLimit|N|16|0|份额下限||
-358|VolUpperLimit|N|16|0|份额上限||
-359|AmountLowerLimit|N|16|0|金额下限||
-360|AmountUpperLimit|N|16|0|金额上限||
+357|VolLowerLimit|N|16|2|份额下限||
+358|VolUpperLimit|N|16|2|份额上限||
+359|AmountLowerLimit|N|16|2|金额下限||
+360|AmountUpperLimit|N|16|2|金额上限||
 361|DaysLowerLimit|N|5|0|天数下限||
 362|DaysUpperLimit|N|5|0|天数上限||
-363|MaxFee|N|16|0|最高费用||
+363|MaxFee|N|16|2|最高费用||
 365|GetFeeRateMethod|C|1||取费率方式|0-固定收费 1-按金额 2-按天数 3-按份额|
 366|FeeRateFlag|C|1||费率标志|0-绝对费率 1-相对费率|
 367|FundNameAbbr|C|20||基金简称||
@@ -365,38 +364,38 @@ ID|字段名|类型|||描述|备注|
 369|IsLOFFund|C|1||是否LOF基金|0-非  1-是|
 370|IsQDIIFund|C|1||是否QDII基金|0-非  1-是|
 371|IsETFFund|C|1||是否ETF基金|0-非  1-是|
-372|RedeemFeeBackRatio|N|16|0|赎回费归基金资产比例||
+372|RedeemFeeBackRatio|N|16|2|赎回费归基金资产比例||
 373|FundEstablishDate|A|8||基金成立日期|YYYYMMDD|
-374|ConstantFee|N|16|0|固定费用||
+374|ConstantFee|N|16|2|固定费用||
 375|IsDiscount|C|1||是否允许打折|0-非  1-是|
-376|BuyPayPeriod|N|16|0|申购交收天数||
-377|RedemptionPayPeriod|N|16|0|赎回交收天数||
-378|ConversionPayPeriod|N|16|0|基金转换交收天数||
+376|BuyPayPeriod|N|16|2|申购交收天数||
+377|RedemptionPayPeriod|N|16|2|赎回交收天数||
+378|ConversionPayPeriod|N|16|2|基金转换交收天数||
 379|ChargePayMethod|C|1||手续费结算方式|0-净额结算  1-全额结算|
 380|CompareProportion|N|16|8|相对比例|费率针对指定费率的比例，即费率/指定费率|
 381|CompareCapitalType|C|3||相对资金类型||
-382|SubPayBackPeriod|N|16|0|认购退款交收天数||
-383|DividendPayPeriod|N|16|0|分红交收天数||
+382|SubPayBackPeriod|N|16|2|认购退款交收天数||
+383|DividendPayPeriod|N|16|2|分红交收天数||
 384|WholeFlag|C|1||全量标志|0-增量   1-全量|
 385|ModifyWay|C|1||修改方式|0-新增   1-修改  2-删除|
-386|ChangeAgencyFee|N|16|0|转换代理费||
-387|RecuperateAgencyFee|N|16|0|补差代理费||
+386|ChangeAgencyFee|N|16|2|转换代理费||
+387|RecuperateAgencyFee|N|16|2|补差代理费||
 388|RedemptionSequence|C|1||指定赎回方式|0-先进先出 1-后进先出|
-389|BuyUpperAmount|N|16|0|申购金额上限||
-390|CovertInUpperAmount|N|16|0|基金转换转入金额上限||
-391|PeriodSubUpperAmount|N|16|0|定时定额申购金额上限||
+389|BuyUpperAmount|N|16|2|申购金额上限||
+390|CovertInUpperAmount|N|16|2|基金转换转入金额上限||
+391|PeriodSubUpperAmount|N|16|2|定时定额申购金额上限||
 392|ChargeType|C|1||收费类型||
 393|SpecifyRateFee|N|9|8|指定费率||
-394|SpecifyFee|N|16|0|指定费用||
+394|SpecifyFee|N|16|2|指定费用||
 395|PeriodSubTimeUnit|C|1||定投周期单位||
 501|FundIncome|N|8|5|货币基金万份收益率||
 502|FundIncomeFlag|C|1||货币基金万份收益正负|0-正  1-负|
 503|Yield|N|8|5|货币基金七日年收益|　|
 504|YieldFlag|C|1||货币基金七日年收益正负|0-正  1-负|
 505|GuaranteedNAV|N|7|4|保本净值|　|
-506|HandleCharge|N|10|0|经手费|　|
-507|UndistributeMonetaryIncome|N|16|0|货币基金未付收益金额|　|
-508|GuaranteedAmount|N|16|0|剩余保本金额|　|
+506|HandleCharge|N|10|2|经手费|　|
+507|UndistributeMonetaryIncome|N|16|2|货币基金未付收益金额|　|
+508|GuaranteedAmount|N|16|2|剩余保本金额|　|
 509|ExchangeFlag|C|1||交易所标志|0-深圳场内  1-上海场内,2-场外|
 510|UndistributeMonetaryIncomeFlag|C|1||货币基金未付收益金额正负|0-正  1-负|
 511|Ref|C|10||券商用|　|
@@ -411,19 +410,19 @@ ID|字段名|类型|||描述|备注|
 532|ProtocalEndDate|A|8||协议截止日期||
 533|RationDate|N|5|0|定期定额的指定日期||
 535|FundDayIncomeFlag|C|1||基金当日总收益正负||
-536|FundDayIncome|N|16|0|基金当日总收益||
+536|FundDayIncome|N|16|2|基金当日总收益||
 537|CustomerID|C|12||客户号||
 538|RationKind|C|3||定期定额品种代码||
-539|BelongFundAssetFare|N|16|0|归基金资产费||
-540|BackFare|N|16|0|后收手续费||
-541|RecuperateFee|N|16|0|补差费|　|
-542|ChangeFee|N|16|0|转换费|　|
-543|AchievementPay|N|16|0|业绩报酬|　|
-544|AchievementCompen|N|16|0|业绩补偿||
-549|OverAmount|N|16|0|申请超限金额|　|
-550|OverShares|N|16|0|申请超限份额|　|
-551|CapitalGainTax|N|16|0|红利所得税|　|
-552|CashDividendFee|N|16|0|现金分红手续费|　|
+539|BelongFundAssetFare|N|16|2|归基金资产费||
+540|BackFare|N|16|2|后收手续费||
+541|RecuperateFee|N|16|2|补差费|　|
+542|ChangeFee|N|16|2|转换费|　|
+543|AchievementPay|N|16|2|业绩报酬|　|
+544|AchievementCompen|N|16|2|业绩补偿||
+549|OverAmount|N|16|2|申请超限金额|　|
+550|OverShares|N|16|2|申请超限份额|　|
+551|CapitalGainTax|N|16|2|红利所得税|　|
+552|CashDividendFee|N|16|2|现金分红手续费|　|
 553|ConfirmPayDate|C|8||确认支付日期|　|
 554|NetValueDate|C|8||净值日期|　|
 555|NetValueType|C|1||净值类型|0-普通净值1-申购净值 2-赎回净值|
@@ -435,21 +434,21 @@ ID|字段名|类型|||描述|备注|
 561|CostPrice|N|7|4|成本价|批量份额调整业务用|
 562|GeneralTASerialNO|A|20||总TA确认流水号|用于发送交易明细|
 601|DrawBonusUnit|N|10|0|分红单位||
-602|FrozenSharesforReinvest|N|16|0|冻结再投资份额||
+602|FrozenSharesforReinvest|N|16|2|冻结再投资份额||
 603|SharesAdjustmentFlag|C|1||份额强制调整标志|0-柜台业务1-管理人批量调整2-管理人普通调整3-ETF份额标准化4-货币基金收益结转5-基金分拆 6-确权 7-挂失换新号8-基金升降级9-净值调整 A-业绩报酬  B-业绩补偿 C-联名卡还款份额调整 D-基金展期份额调整|
 604|PeriodicStatus|C|1||定期定额状态|0-允许定期定额业务,1-仅允许定投业务,2-仅允许定赎业务,3-禁止定期定额业务|
 605|TransferAgencyStatus|C|1||转托管状态|0-允许所有转托管,1-仅允许场外转托管,2-仅允许跨市场转托管,3-禁止所有转托管|
 606|TransactionAccountStatus|C|1||交易账户状态|0-正常，3-注销|
 607|RationNo|C|3||定期定额序号||
 608|AchievementPayFlag|C|1||业绩报酬正负||
-609|IndiMaxPurchase|N|16|0|个人最大申购金额||
-610|InstMaxPurchase|N|16|0|法人最大申购金额||
-611|IndiDayMaxSumBuy|N|16|0|个人当日累计购买最大金额||
-612|InstDayMaxSumBuy|N|16|0|法人当日累计购买最大金额||
-613|IndiDayMaxSumRedeem|N|16|0|个人当日累计赎回最大份额||
-614|InstDayMaxSumRedeem|N|16|0|法人当日累计赎回最大份额||
-615|IndiMaxRedeem|N|16|0|个人最大赎回份额||
-616|InstMaxRedeem|N|16|0|法人最大赎回份额||
+609|IndiMaxPurchase|N|16|2|个人最大申购金额||
+610|InstMaxPurchase|N|16|2|法人最大申购金额||
+611|IndiDayMaxSumBuy|N|16|2|个人当日累计购买最大金额||
+612|InstDayMaxSumBuy|N|16|2|法人当日累计购买最大金额||
+613|IndiDayMaxSumRedeem|N|16|2|个人当日累计赎回最大份额||
+614|InstDayMaxSumRedeem|N|16|2|法人当日累计赎回最大份额||
+615|IndiMaxRedeem|N|16|2|个人最大赎回份额||
+616|InstMaxRedeem|N|16|2|法人最大赎回份额||
 617|TargetRegistrarCode|C|2||对方TA代码||
 618|AllowRedemptDate|A|8||可赎回日期||
 619|AddFlag|C|1||增删标志||
@@ -471,14 +470,14 @@ ID|字段名|类型|||描述|备注|
 635|ReservedField1|C|20||预留字段1||
 636|ReservedField2|C|20||预留字段2||
 637|ReservedField3|C|30||预留字段3||
-638|ReservedField4|N|16|0|预留字段4||
-639|ReservedField5|N|16|0|预留字段5||
+638|ReservedField4|N|16|2|预留字段4||
+639|ReservedField5|N|16|2|预留字段5||
 640|TAAccountID2|C|35||投资人基金帐号||
 641|FundCode2|C|12||基金代码||
 642|CodeOfTargetFund2|C|12||转换时的目标基金代码||
-643|Charge2|N|16|0|手续费||
-644|AgencyFee2|N|16|0|代理费||
-645|PayAmount|N|16|0|交收金额||
+643|Charge2|N|16|2|手续费||
+644|AgencyFee2|N|16|2|代理费||
+645|PayAmount|N|16|2|交收金额||
 646|FundManagerCode2|C|18||基金管理人||
 647|CustodianCode2|C|18||托管人代码||
 648|RegistrarCode2|C|18||注册登记人代码||
@@ -489,7 +488,7 @@ ID|字段名|类型|||描述|备注|
 653|PriorFlag|C|1||优先劣后标识||
 654|FundEndDate|C|8||到期日||
 655|RelationUsage|C|2||关系用途||
-656|AccumulativePerDiv|N|16|0|累积单位分红||
+656|AccumulativePerDiv|N|16|2|累积单位分红||
 657|MarketFlag|C|1||市场标志||
 658|StockAccount|C|10||股票账户||
 659|TaxRatio|N|7|4|计税比例||
