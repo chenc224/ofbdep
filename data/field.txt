@@ -340,7 +340,7 @@
 344|CommendPersonType|C|1||推荐人类型|1:内部员工2:注册用户,3:基金账户4:客户经理编号5:客户经理姓名0:其他|
 345|CapitalMode|C|2||资金方式|1：普通方式，2：兴业银基通，3：银联通，4：工行网银，5：好易联，6：汇付天下，7：工行银基通，8：好易联托收，9：银行代扣款，A：农行网银，B：建行网银，C：交行网银，D：北京银行，E：支付宝，F：浦发网银，G：招行网银，H：开联网银，I：富友，J：民生网银，K：网下转账，L：平安网银，M：通联，N：中行网银，P：易宝，Q：财富通|
 346|DetailCapticalMode|C|2||明细资金方式||
-347|BackenloadDiscount|N|54|0|补差费折扣率||
+347|BackenloadDiscount|N|5|4|补差费折扣率||
 348|CombineNum|C|6||组合编号||
 349|AlternationDate|A|8||最后更新日||
 350|TargetDistributorType|C|1||对方销售人类型||

@@ -360,7 +360,7 @@ struct stru_ofbdep_field ofbdep_field[]={
 	{"CommendPersonType",'C',1,0,"推荐人类型"},
 	{"CapitalMode",'C',2,0,"资金方式"},
 	{"DetailCapticalMode",'C',2,0,"明细资金方式"},
-	{"BackenloadDiscount",'N',54,0,"补差费折扣率"},
+	{"BackenloadDiscount",'N',5,4,"补差费折扣率"},
 	{"CombineNum",'C',6,0,"组合编号"},
 	{"AlternationDate",'A',8,0,"最后更新日"},
 	{"TargetDistributorType",'C',1,0,"对方销售人类型"},
